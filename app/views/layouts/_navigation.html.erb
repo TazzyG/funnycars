@@ -1,0 +1,33 @@
+<nav class= "navbar navbar-inverse simple_navbar">
+  <div class= "container">
+    
+    <div class= "navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target= ".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  <div class="collapse navbar-collapse  navbar-main-collapse">
+    <ul class="nav navbar-nav">
+      <a href='#page-top'></a>
+      <li class="page-scroll">
+        <%= link_to "Schedule", root_path(anchor: "about")%>      
+      </li>
+      <li class="page-scroll">
+        <%= link_to "Standings", root_path(anchor: "standings")%>      
+      </li>
+      <li class="page-scroll">
+        <%= link_to "Media", root_path(anchor: "media")%>      
+      </li>
+      <li class="page-scroll">
+        <%= link_to "Photos", root_path(anchor: "about")%>      
+      </li>
+      <li class="page-scroll">
+        <%= link_to "Teams", root_path(anchor: "about")%>      
+      </li>
+      <li class= "sign_in">
+        <%= link_to "Sign In", "#" %>
+      </li>
+    </ul>
+  </div>
+</nav>

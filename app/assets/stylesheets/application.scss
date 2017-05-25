@@ -1,0 +1,53 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+//colors
+$dark: #000000;
+$light: #FFFFFC;
+$primary: #E6CF20;
+$success: #CB8D2C;
+$warning: #D00120;
+$info: #B3D6F2;
+
+body {
+background: black;
+color: #fff;
+}
+
+.logo {
+  img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+  }
+}
+
+.simple_navbar .navbar-nav {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  .sign_in a {
+    color: $warning;
+  }
+  li > a {
+      color:$primary;
+    
+  }
+}
+
+.content {
+  padding-top: 350px;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
