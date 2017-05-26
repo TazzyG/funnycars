@@ -10,6 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require jquery.easing
+//= require scrollReveal
 //= require_tree .
+
+$(function() {
+  window.scrollReveal = new scrollReveal();
+});
+
+

@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "headers";
+@import "hover.min";
 
 //colors
 $dark: #000000;
@@ -39,6 +41,8 @@ color: #fff;
 .content {
   padding-top: 350px;
 }
+
+
 
 @media (min-width: 768px) {
     .navbar .navbar-nav {
