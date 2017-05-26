@@ -3,6 +3,7 @@ lock "3.8.1"
 
 set :application, "funnycars"
 set :repo_url, "https://github.com/TazzyG/funnycars.git"
+set :linked_files, %w('.env') 
 
 set :deploy_to, '/home/laurie/funnycars'
 
