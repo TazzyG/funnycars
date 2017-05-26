@@ -3,7 +3,6 @@ lock "3.8.1"
 
 set :application, "funnycars"
 set :repo_url, "https://github.com/TazzyG/funnycars.git"
-set :linked_dirs, %w{bin log tmp/backup tmp/pids tmp/cache tmp/sockets vendor/bundle}
 
 set :deploy_to, '/home/laurie/funnycars'
 
