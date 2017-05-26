@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'capistrano-dotenv-tasks', require: false
+gem 'dotenv-rails'
 
 
 group :development, :test do
@@ -43,7 +44,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'dotenv-rails'
+ 
   
 end
 
