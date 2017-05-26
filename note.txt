@@ -1,0 +1,5 @@
+DEPLOYMENT NOTES
+Add variables with http://www.rubydoc.info/gems/capistrano-dotenv-tasks/0.1.3 
+example cap production config:set FUNNYCARS_DATABASE_PASSWORD=thepassword
+SETUP database 
+
