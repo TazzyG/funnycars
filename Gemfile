@@ -1,11 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
@@ -40,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'capistrano-dotenv-tasks', require: false
 
 
 group :development, :test do
@@ -49,7 +44,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'dotenv-rails'
-  gem 'capistrano-dotenv-tasks', require: false
+  
 end
 
 group :development do
