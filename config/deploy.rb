@@ -9,7 +9,7 @@ set :deploy_to, '/home/laurie/funnycars'
 set :pty,             true
 set :use_sudo,        false
 set :deploy_via, :remote_cache
-set :deploy_to, '/home/laurie/friendlyroad-rails'
+set :deploy_to, '/home/laurie/funnycars'
 set :rvm_ruby_version, '2.4.0'
 
 set :pty,             true
