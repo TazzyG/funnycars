@@ -2,7 +2,7 @@
   <div class="col-md-offset-1 col-md-6">
     <% if current_user %>
       <h2>Edit the Slider Images</h2>
-      <%= link_to "New Post", new_article_path, class: "btn btn-primary" %>
+      <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
     <% else %>
       <div id="myCarousel" class="carousel slide cardisplay" data-ride="carousel">
       <!-- Indicators -->
@@ -10,19 +10,20 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        
       </ol>
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag "al.jpg" %>
+          <%= image_tag @articles[0].picture.url(:slider)%>
         </div>
     
         <div class="item">
-          <%= image_tag "joey.jpg" %>
+          <%= image_tag @articles[1].picture.url(:slider)%>
         </div>
     
         <div class="item">
-          <%= image_tag "shane.jpg" %>
+          <%= image_tag @articles[2].picture.url(:slider)%>
         </div>
       </div>
 
