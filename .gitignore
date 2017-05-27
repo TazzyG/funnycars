@@ -16,10 +16,6 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
-/db/*.postgresql
-/db/*.postgresql-journal
-
 .env
 
 /shared/*
