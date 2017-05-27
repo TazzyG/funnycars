@@ -67,7 +67,19 @@ color: #fff;
     
   }
 }
+.footer {
+  background-color: #f4f5f7;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  padding: 1%;
 
+  a {
+    color: $warning;
+  }
+  .fa {
+    color: blue;
+  }
+}
 
 
 
