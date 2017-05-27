@@ -1,0 +1,207 @@
+.btn {
+    text-transform: uppercase;
+    
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open .dropdown-toggle {
+      outline: none !important;
+  }
+}
+
+ul.button-list {
+    li {
+        padding: 0;
+        &:first-child {
+            margin-bottom: 10px;
+            padding-right: 0;
+        }
+    }
+}
+
+@media(min-width:767px) {
+    ul.button-list {
+        li {
+            &:first-child {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+// Main Buttons
+
+.btn-default {
+  @include button-variant($dark, $light, darken($light, 15%));
+}
+
+.btn-primary {
+  @include button-variant($light, $primary, darken($primary, 5%));
+}
+
+.btn-success {
+  @include button-variant($light, $success, darken($success, 5%));
+}
+
+.btn-info {
+  @include button-variant($light, $info, darken($info, 5%));
+}
+
+.btn-warning {
+  @include button-variant($light, $warning, darken($warning, 5%));
+}
+
+.btn-danger {
+  @include button-variant($light, $danger, darken($danger, 5%));
+}
+
+// Raised Buttons
+
+.btn-raised {
+    border-bottom-width: 4px;
+    transition: none;
+
+    &:active,
+    &.active,
+    .open .dropdown-toggle {
+        outline: none;
+        border-bottom-width: 3px;
+        margin-top: 1px;
+    }
+}
+
+// Outline Buttons
+
+.btn-outline.btn-light,
+.btn-outline.btn-dark,
+.btn-outline.btn-primary,
+.btn-outline.btn-secondary,
+.btn-outline.btn-success,
+.btn-outline.btn-info,
+.btn-outline.btn-warning,
+.btn-outline.btn-danger {
+    background-color: transparent;
+    @include button-transition;
+}
+
+.btn-outline.btn-light {
+    border: 1px solid $light;
+    color: $light;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $light;
+        color: $dark;
+        background-color: $light;
+    }
+}
+
+.btn-outline.btn-dark {
+    border: 1px solid $dark;
+    color: $dark;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $dark;
+        outline: none;
+        color: $light;
+        background-color: $dark;
+    }
+}
+
+.btn-outline.btn-primary {
+    border: 1px solid $primary;
+    color: $primary;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $primary;
+        outline: none;
+        color: $light;
+        background-color: $primary;
+    }
+}
+
+.btn-outline.btn-success {
+    border: 1px solid $success;
+    color: $success;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $success;
+        outline: none;
+        color: $light;
+        background-color: $success;
+    }
+}
+
+.btn-outline.btn-info {
+    border: 1px solid $info;
+    color: $info;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $info;
+        outline: none;
+        color: $light;
+        background-color: $info;
+    }
+}
+
+.btn-outline.btn-warning {
+    border: 1px solid $warning;
+    color: $warning;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $warning;
+        outline: none;
+        color: $light;
+        background-color: $warning;
+    }
+}
+
+.btn-outline.btn-danger {
+    border: 1px solid $danger;
+    color: $danger;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $danger;
+        outline: none;
+        color: $light;
+        background-color: $danger;
+    }
+}
+
+// Rounded Buttons
+
+.btn-rounded {
+  border-radius: 5em;
+}
+
+// Square Buttons
+
+.btn-square {
+  border-radius: 0;
+}
+
+// Social Buttons
+
+.btn-social-dark {
+    background-color: transparent;
+    color: $dark;
+}
+
+.btn-social-light {
+    background-color: transparent;
+    color: $light;
+}

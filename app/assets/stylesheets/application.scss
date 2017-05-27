@@ -5,14 +5,10 @@
 @import "hover.min";
 @import 'owl.carousel';
 @import 'owl.theme';
-
-//colors
-$dark: #000000;
-$light: #FFFFFC;
-$primary: #E6CF20;
-$success: #CB8D2C;
-$warning: #D00120;
-$info: #B3D6F2;
+@import 'flash_messages';
+@import 'variables';
+@import 'mixins';
+@import 'buttons';
 
 body {
 background: black;

@@ -1,46 +1,53 @@
 <div class="row">
   <div class="col-md-offset-1 col-md-6">
-    <div id="myCarousel" class="carousel slide cardisplay" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag "al.jpg" %>
-    </div>
-
-    <div class="item">
-      <%= image_tag "joey.jpg" %>
-    </div>
-
-    <div class="item">
-      <%= image_tag "shane.jpg" %>
-    </div>
-  </div>
+    <% if current_user %>
+      <h2>Edit the Slider Images</h2>
+    <% else %>
+      <div id="myCarousel" class="carousel slide cardisplay" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag "al.jpg" %>
+        </div>
+    
+        <div class="item">
+          <%= image_tag "joey.jpg" %>
+        </div>
+    
+        <div class="item">
+          <%= image_tag "shane.jpg" %>
+        </div>
+      </div>
 
   <!-- Left and right controls -->
   
 </div>
+    <% end %>
   </div>
   <div class="col-md-5 sponsors">
-    <div>
+    <% if current_user %>
+      <h2>Edit the Sponsor Logos</h2>
+    <% else %>
+      <div>
     <%= link_to href: 'http://www.trailtire.com/' do %>
       <span class= "logo img-responsive center-block">
         <%= image_tag  "trailtirethumb.png" %>
       </span>
     <% end %>
     </div>
-     <div>
-    <%= link_to href: 'https://surewerx.com/' do %>
-      <span class= "logo img-responsive center-block">
-        <%= image_tag  "surewerx.png" %>
-      </span>
+      <div>
+        <%= link_to href: 'https://surewerx.com/' do %>
+          <span class= "logo img-responsive center-block">
+            <%= image_tag  "surewerx.png" %>
+          </span>
+        <% end %>
+      </div>
     <% end %>
-    </div>
   </div>
 </div>

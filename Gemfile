@@ -39,6 +39,8 @@ gem 'dotenv-rails'
 
 gem 'owlcarousel-rails'
 
+gem 'devise', '~> 4.2'
+
 
 
 group :development, :test do
