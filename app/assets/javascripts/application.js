@@ -16,10 +16,33 @@
 //= require bootstrap-sprockets
 //= require jquery.easing
 //= require scrollReveal
+//= require owl.carousel
 //= require_tree .
 
+/* global $*/
+/* global scrollReveal*/
 $(function() {
   window.scrollReveal = new scrollReveal();
 });
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:4,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
 
 

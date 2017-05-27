@@ -1,5 +1,11 @@
 DEPLOYMENT NOTES
 Add variables with http://www.rubydoc.info/gems/capistrano-dotenv-tasks/0.1.3 
 example cap production config:set FUNNYCARS_DATABASE_PASSWORD=thepassword
-SETUP database 
+SETUP database
+Google how to set up Postgresql in Production, you need to add a database in prod before deploying
+The postgresql section in this link helped https://gorails.com/deploy/ubuntu/16.04
+
+
+NGINX Do not leave home with out this link
+https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/trusty/deploy_app.html
 

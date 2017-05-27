@@ -1,136 +1,46 @@
+<div class="row">
+  <div class="col-md-offset-1 col-md-6">
+    <div id="myCarousel" class="carousel slide cardisplay" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-
-  <header id="myCarousel" class="carousel slide carousel-fade intro-slider" data-ride="carousel">
-
-    <!-- Indicators -->
-    
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
     <div class="item active">
-      <div class="fill" style="background-image: url('al.jpg');"></div>
-      <div class="overlay"></div>
-      <div class="carousel-caption">
-        <div class="intro-body">
-          
-            <p class="intro-welcome">Creative Moments</p>
-              <br>
-              <h1 class="brand-heading">
-                  A
-                    <span class="text-primary">Creative</span>
-                    <br>Place To be
-                    <span class="text-primary"> Me</span>
-              </h1>
-              <br>
-              
-            <hr class="light">
-            <div class="page-scroll" data-scrollreveal="enter bottom after .6s">
-              <a href="#about" class="btn btn-scroll-light sink">
-                  <i class="fa fa-angle-double-down"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-        <div class="item">
-        <div class="fill" style="background-image: url('joey.jpg');"></div>
-        <div class="overlay"></div>
-        <div class="carousel-caption">
-          <div class="intro-body">
-            
-              <p class="intro-welcome">Great things</p>
-            
-            <br>
-            <h1 class="brand-heading">
-                A
-                <span class="text-primary">Creative</span>
-                <br>Driver Name
-                <span class="text-primary">Event </span>
-            </h1>
-            <div id= "buttons" class= "row text-center">
-              
-              
-            </div>
-            <hr class="light">
-            
-            <div class="page-scroll" data-scrollreveal="enter bottom after .6s">
-                <a href="#about" class="btn btn-scroll-light sink">
-                    <i class="fa fa-angle-double-down"></i>
-                </a>
-            </div>
-          </div>
-        </div>
-      </div>
-     
-      
-      
-        <div class="item">
-        <div class="fill" style="background-image: url('joey.jpg');"></div>
-        <div class="overlay"></div>
-        <div class="carousel-caption">
-          <div class="intro-body">
-            
-              <p class="intro-welcome">Hello</p>
-            
-            <br>
-            <h1 class="brand-heading">
-                A
-                <span class="text-primary">Creative</span>
-                <br>Great 
-                <span class="text-primary">Energy</span>
-            </h1>
-            <br>
-            <div id= "buttons" class= "row text-center">
-              
-              
-            </div>
-            <hr class="light">
-           
-            <div class="page-scroll" data-scrollreveal="enter bottom after .6s">
-                <a href="#about" class="btn btn-scroll-light sink">
-                    <i class="fa fa-angle-double-down"></i>
-                </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-       
-      
-      
-        <div class="item">
-          background-image: url('image.png')
-        <div class="fill" style="background-image: url('shane.jpg'});"></div>
-        <div class="overlay"></div>
-        <div class="carousel-caption">
-          <div class="intro-body">
-           <p class= "intro-welcome"> Here</p>
-            
-            <br>
-           
-            <h1 class="brand-heading">
-                An
-                <span class="text-primary">Eclectic</span>
-                <br>
-                Blend of
-                <span class="text-primary">Hot Spots</span>
-            </h1>
-            <br>
-            <div id= "buttons" class= "row text-center">
-              
-            </div>
-            <hr class="light">
-            
-            <div class="page-scroll" data-scrollreveal="enter bottom after .6s">
-              <a href="#about" class="btn btn-scroll-light sink">
-                  <i class="fa fa-angle-double-down"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-     
+      <%= image_tag "al.jpg" %>
     </div>
-  </header> 
+
+    <div class="item">
+      <%= image_tag "joey.jpg" %>
+    </div>
+
+    <div class="item">
+      <%= image_tag "shane.jpg" %>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  
+</div>
+  </div>
+  <div class="col-md-5 sponsors">
+    <div>
+    <%= link_to href: 'http://www.trailtire.com/' do %>
+      <span class= "logo img-responsive center-block">
+        <%= image_tag  "trailtirethumb.png" %>
+      </span>
+    <% end %>
+    </div>
+     <div>
+    <%= link_to href: 'https://surewerx.com/' do %>
+      <span class= "logo img-responsive center-block">
+        <%= image_tag  "surewerx.png" %>
+      </span>
+    <% end %>
+    </div>
+  </div>
+</div>
