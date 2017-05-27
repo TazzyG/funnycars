@@ -1,15 +1,39 @@
-<%= form_for :article, url: articles_path do |f| %>
-    <p>
-      <%= f.label :title %> <br>
-      <%= f.text_field :title %>
-    </p>
-    
-    <p>
-      <%= f.label :text %> <br>
-      <%= f.text_area :text %>
-    </p>
-    
-    <p>
-      <%= f.submit %>
-    </p>
+<%= form_for(@article, html: { multipart: true }) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="form-group">
+      <%= f.hidden_field :user_id %>
+    </div>
+    <div class="form-group">
+      <%= f.label :picture %>
+      <%= f.file_field :picture, class: "form-control" %>
+      <%= f.hidden_field :picture_cache %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "One to Two words" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :content, autofocus: true, class: "form-control", placeholder: "Summary Information, max a paragraph" %>
+    </div>
+    <div class="btn-group">
+      <%= f.submit "Submit Article", class: "btn btn-primary" %>
+    </div>
 <% end %>
+
+<script type="text/javascript">
+  $('#article_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 15) {
+      alert('Maximum file size is 15MB. Please choose a smaller file.');
+    }
+  });
+</script>

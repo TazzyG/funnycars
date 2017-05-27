@@ -13,6 +13,13 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.postgresql
+/db/*.postgresql-journal
+
 .env
 
 /shared/*
@@ -21,3 +28,6 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore uploaded test images.
+/public/uploads
