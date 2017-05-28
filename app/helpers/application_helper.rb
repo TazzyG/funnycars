@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(page_title = '')
-    base_title = "RockyMountainFloppers"
+    base_title = "Rocky Mountain Floppers"
     meta = "Nostalgia Funny Cars"
     if page_title.empty?
       base_title + ":" + meta
