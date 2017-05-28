@@ -41,10 +41,10 @@ gem 'owlcarousel-rails'
 
 gem 'devise', '~> 4.2'
 
-gem 'mini_magick'
-gem 'carrierwave-imageoptimizer'
+gem 'carrierwave-imageoptimizer', '~>1.4'
+gem 'mini_magick', '~> 4.6'
 gem 'fog-aws', group: :production
-gem 'carrierwave-aws', '~> 1.0'
+gem 'carrierwave', '~> 1.0'
 
 
 
