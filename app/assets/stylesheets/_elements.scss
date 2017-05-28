@@ -1,7 +1,8 @@
 body {
-    height: 100%;
-    color: light;
-    background-color: dark;
+     height: 100%;
+     color: #FFF;
+     background-color: #000;
+     
 }
 
 html {
@@ -26,43 +27,43 @@ img {
 
 section,
 aside {
-    padding: 50px 0;
+    padding: 30% 0;
 }
 
 @media(min-width:767px) {
     section {
-        padding: 100px 0;
+        padding: 243px 0 100 0;
     }
 }
 
 .well {
     border: none;
     box-shadow: none;
-    background-color: darken(light, 3%);
+    background-color: darken($light, 3%);
 }
 
 .jumbotron {
-    background-color: lighten(light, 3%);
+    background-color: lighten($light, 3%);
 }
 
 .page-header {
-    border-bottom-color: darken(light, 10%)
+    border-bottom-color: darken($light, 10%)
 }
 
 .img-light-border {
-    border: 5px solid light;
+    border: 5px solid $light;
 }
 
 .img-dark-border {
-    border: 5px solid dark;
+    border: 5px solid $dark;
 }
 
 .light-faded-border {
-    border: solid 15px fade(light, 50%);
+    border: solid 15px fade($light, 50%);
 }
 
 .dark-faded-border {
-    border: solid 15px fade(dark, 50%);
+    border: solid 15px fade($dark, 50%);
 }
 
 .img-centered {
@@ -89,12 +90,12 @@ aside {
 
 ::-moz-selection {
     text-shadow: none;
-    background: fade(primary, 50%);
+    background: fade($primary, 50%);
 }
 
 ::selection {
     text-shadow: none;
-    background: fade(primary, 50%);
+    background: fade($primary, 50%);
 }
 
 img::selection {
@@ -106,17 +107,17 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: fade(primary, 50%);
+    webkit-tap-highlight-color: fade($primary, 50%);
 }
 
 // Owl Carousel Color Overrides
 
 .owl-theme .owl-controls .owl-page span {
-    background: darken(light, 15%);
+    background: darken($light, 15%);
 }
 
 .owl-theme .owl-controls .owl-buttons div {
-    background: darken(light, 15%);
+    background: darken($light, 15%);
 }
 
 .banner_title {

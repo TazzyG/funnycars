@@ -1,0 +1,25 @@
+.simple_navbar .navbar-nav {
+  font-family: 'Faster One', cursive;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: transparent;
+  
+  
+  .sign_in a {
+    color: $warning;
+  }
+  li > a {
+      color:$primary;
+    
+  }
+  
+}
+
+@media screen and (min-width:767px) {
+  
+  .simple_navbar .navbar-nav {
+    padding: 20px 0;
+  }
+  
+}

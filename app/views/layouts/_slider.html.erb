@@ -1,30 +1,31 @@
-<div class="row">
+
+<div class="row intro">
   <div class="col-md-offset-1 col-md-6">
     <% if current_user %>
       <h2>Edit the Slider Images</h2>
       <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
     <% else %>
-      <div id="myCarousel" class="carousel slide cardisplay" data-ride="carousel">
+      <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
+     
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <% @articles.each_with_index do |article, i| %>
+          <li data-target="#myCarousel" data-slide-to="i" class="active"></li>
+        <% end %>
+    
         
       </ol>
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag "joey.jpg" %>
-        </div>
-    
-        <div class="item">
-          <%= image_tag "joey.jpg" %>
-        </div>
-    
-        <div class="item">
           <%= image_tag "shane.jpg" %>
         </div>
+        <% @articles.each do |article| %>
+          <div class="item">
+            <%= image_tag article.picture.url(:slider) %>
+          </div>
+        <% end %>
+        
       </div>
 
   <!-- Left and right controls -->

@@ -1,6 +1,24 @@
 // Intro Sections
 
+.logo {
+  img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+  }
+  
+}
+
 // -- Global Elements
-.slider {
-    width: 800px;
+
+
+@media screen and (min-width:767px) {
+    
+    .brand_image {
+    
+    margin: 0;
+    }  
+    
+
+
 }

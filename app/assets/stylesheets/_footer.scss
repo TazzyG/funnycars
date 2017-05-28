@@ -1,0 +1,14 @@
+.footer {
+  background-color: $dark;
+  color: $light;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  padding: 50px 0;
+
+  a {
+    color: $warning;
+  }
+  .fa {
+    color: ffffff;
+  }
+}
