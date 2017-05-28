@@ -44,7 +44,7 @@ gem 'devise', '~> 4.2'
 gem 'mini_magick'
 gem 'carrierwave-imageoptimizer'
 gem 'fog-aws', group: :production
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws', '~> 1.0'
 
 
 
