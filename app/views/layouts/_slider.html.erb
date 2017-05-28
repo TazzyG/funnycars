@@ -17,11 +17,11 @@
       </ol>
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
-        <div class="item active">
+        <div class="item active center-block">
           <%= image_tag "shane.jpg" %>
         </div>
         <% @articles.each do |article| %>
-          <div class="item">
+          <div class="item center-block">
             <%= image_tag article.picture.url(:slider) %>
           </div>
         <% end %>

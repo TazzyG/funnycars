@@ -16,9 +16,10 @@
   
 }
 
-@media screen and (min-width:767px) {
+@media (min-width: 768px) {
   
   .simple_navbar .navbar-nav {
+    font-size: 20px;
     padding: 20px 0;
   }
   
