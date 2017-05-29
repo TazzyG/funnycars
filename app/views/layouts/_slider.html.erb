@@ -5,7 +5,7 @@
       <h2>Edit the Slider Images</h2>
       <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
     <% else %>
-      TEST %= image_tag @articles.first.picture.url(:slider) %>
+      TEST <%= image_tag @articles.first.picture.url(:slider) %>
 
       <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
      
