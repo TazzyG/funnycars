@@ -15,10 +15,10 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active center-block">
-          <h4 class="text-muted"><%= @articles.first.title.titleize %></h4>
-          <%= image_tag @articles.first.picture.url(:slider) %>
+          <h4 class="text-muted">Nitro Madness</h4>
+          <iframe width="700" height="350" src="https://www.youtube.com/embed/rl65fS89JSE" frameborder="0" allowfullscreen></iframe>
           <br>
-           <em><%= @articles.first.content %></em>
+           <em>Nitro belching array on display at the 61st Annual World Series of Drag Racing at Cordova Dragway Park 8-23-14</em>
         </div>
         <% @articles.each do |article| %>
           <div class="item center-block">
