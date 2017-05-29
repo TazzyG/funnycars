@@ -1,17 +1,74 @@
 <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-  
   <div class="carousel slide intro-slider" data-ride="carousel">
     <div class="item active">
-      <div class="fill" style="background: url(<%=@articles[2].picture.url(:large) %>) no-repeat">
-      
-   
-      
-      
-      <div class= "carousel-caption" id="master_event_bottom">
-         <h4> <%= @articles[3].content.truncate(140) %></h4>
-         
-
+      <div class="fill"> <%= image_tag @team.picture.url(:large) %>
       </div>
+       <div class= "carousel-caption" id="master_event_bottom">
+         
+         <h1> <%= @team.team_name.titleize %>
+         <%= link_to '#' do %>
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <% end %>
+        
+         
+            <%= link_to '#' do %>
+              <i class="fa fa-youtube-square" aria-hidden="true"></i>
+            <% end %>
+         
+           
+            <%= link_to '#' do %>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            <% end %>
+          </h1>
+      </div>
+   
     </div>
-  </div>  
+  </div>
 </div>
+<div class= "container">
+    <div class = "row">
+      <div class= "col-md-4">
+        <h2> Team </h2>
+         <h4><span class= "text-primary">Team Name:</span> <%= @team.team_name %> </h4>
+         <h4><span class= "text-primary">Driver: </span> <%= @team.driver %></h4>
+         <p><span class= "text-primary">Home Town:</span><%= @team.home_town %></p>
+         <p><span class= "text-primary">Crew Chief</span><%= @team.crew_chief %></p>
+         <p><span class= "text-primary">Crew:</span> <%= @team.crew %></p>
+      </div>   
+    
+    
+      <div class= "col-md-4">
+       <h2> Car Details</h2>
+         <h3><span class="text-primary"> Name:</span><%= @team.car_name %> </h3>
+         <p><span class= "text-primary"> Car:</span> <%= @team.car %></p>
+         <p><span class= "text-primary"> Engine:</span> <%= @team.engine %></p>
+         <p><span class= "text-primary"> Chassis:</span> <%= @team.chassis %></p>
+      </div>   
+    
+    
+      <div class= "col-md-4">
+       <h2> Events This Year</h2>
+         <p>coming soon</p>
+      </div> 
+    </div>
+    <hr>
+    <div class= "row">
+    <div class= "col-offset-1 col-md-10">
+      <p><span class= "text-primary"> Sponsors:</span> Home Style Constructions, Trail Tire, Boycuck Venture, HDF Race Car Insurance</p> 
+      <p><span class= "text-primary"> Performance Bests:</span> 6.74 @209mph</p>
+      <p><span class= "text-primary"> History of the team:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
+      <p><span class= "text-primary"> Drag Racing History:</span> 
+      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix, sed propriae tractatos ad, vis te magna dicat iriure. Agam alterum apeirian his at. Ea vix maiorum pericula, scaevola scribentur ea vim.
+      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
+      <p><span class= "text-primary"> Career highlights:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
+      <p><span class= "text-primary"> Current racing plans:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
+      <p><span class= "text-primary"> Future Goals:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
+      <p><span class= "text-primary"> Favorite Racing Moments:</span> 
+      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix, sed propriae tractatos ad, vis te magna dicat iriure. Agam alterum apeirian his at. Ea vix maiorum pericula, scaevola scribentur ea vim.
+      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
+      <p><span class= "text-primary"> Heros of the sport:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix
+      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix, sed propriae tractatos ad, vis te magna dicat iriure. Agam alterum apeirian his at. Ea vix maiorum pericula, scaevola scribentur ea vim.
+      </p>
+    </div>
+    </div>
+  </div>

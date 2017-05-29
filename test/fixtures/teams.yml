@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  driver: MyString
+  home_town: MyString
+  crew: MyString
+  car_name: 
+  car: MyString
+  engine: MyString
+  chassis: MyString
+  feature_image_id: 1
+  facebook: MyString
+  youtube: MyString
+  instagram: MyString
+
+two:
+  team_name: MyString
+  driver: MyString
+  home_town: MyString
+  crew: MyString
+  car_name: 
+  car: MyString
+  engine: MyString
+  chassis: MyString
+  feature_image_id: 1
+  facebook: MyString
+  youtube: MyString
+  instagram: MyString
