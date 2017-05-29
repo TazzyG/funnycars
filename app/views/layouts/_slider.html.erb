@@ -16,14 +16,14 @@
       <div class="carousel-inner">
         <div class="item active center-block">
           <%= image_tag @articles.first.picture.url(:slider) %>
+          <%= @articles.first.title.capitalize %>
         </div>
         <% @articles.each do |article| %>
           <div class="item center-block">
             <%= image_tag article.picture.url(:slider) %>
-            <%= article.title %>
+            <%= article.title.capitalize %>
           </div>
         <% end %>
-        
       </div>
 
   <!-- Left and right controls -->
