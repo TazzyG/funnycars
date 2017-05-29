@@ -4,7 +4,6 @@
     <% if current_user %>
       <h2>Edit the Slider Images</h2>
       <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
-        <%= image_tag @articles.sample.picture.url(:slider) %>  
     <% else %>
     
 
@@ -15,7 +14,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active center-block">
-          <%= image_tag @articles.sample.picture.url(:slider) %>
+          <%= image_tag @articles[2].picture.url(:slider) %>
         </div>
         
           <div class="item center-block">
