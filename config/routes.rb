@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get 'welcome/index'
   
   resources :articles
-  resources :teams
+  resources :teams do
+    resources :team_infos
+  end
+  resources :topics
  
   resources :sessions, only: [:new]
   

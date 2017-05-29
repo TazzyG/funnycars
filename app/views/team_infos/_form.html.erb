@@ -1,0 +1,21 @@
+<div>
+<%= form_for([@team, @team.team_infos.build]) do |f| %>
+  <div class="form-group">
+  <%= f.hidden_field :user_id %>
+  </div>
+  <div class="form-group">
+  <%= f.hidden_field :team_id %>
+  </div>
+  <div class="form-group">
+  <%= f.text_field :topic , autofocus: true, class: "form-control", placeholder: "topic", data: {autocomplete_source: topics_path} %>
+  </div>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :body, autofocus: true, class: "form-control", placeholder: "content" %>
+  </div>
+  <div class="actions btn-group">
+    <%= f.submit "Submit Info", class: "btn btn-xs" %>
+  </div>
+<% end %>
+
+</div>

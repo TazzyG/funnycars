@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'font-awesome-rails'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'jquery-easing-rails', '~> 0.0.2'
 gem "scrollreveal-rails"    
 
@@ -45,6 +45,7 @@ gem 'carrierwave-imageoptimizer', '~>1.4'
 gem 'mini_magick', '~> 4.6'
 gem 'fog-aws', group: :production
 gem 'carrierwave', '~> 1.0'
+gem 'jquery-ui-rails'
 
 
 

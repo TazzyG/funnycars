@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529182507) do
+ActiveRecord::Schema.define(version: 20170529210424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,19 @@ ActiveRecord::Schema.define(version: 20170529182507) do
     t.index ["event_date"], name: "index_articles_on_event_date"
     t.index ["event_id"], name: "index_articles_on_event_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "team_infos", force: :cascade do |t|
+    t.bigint "team_id"
+    t.string "topic"
+    t.text "body"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "topic_id"
+    t.index ["team_id"], name: "index_team_infos_on_team_id"
+    t.index ["topic_id"], name: "index_team_infos_on_topic_id"
+    t.index ["user_id"], name: "index_team_infos_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -52,6 +65,12 @@ ActiveRecord::Schema.define(version: 20170529182507) do
     t.index ["user_id"], name: "index_teams_on_user_id"
   end
 
+  create_table "topics", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -70,4 +89,7 @@ ActiveRecord::Schema.define(version: 20170529182507) do
   end
 
   add_foreign_key "articles", "users"
+  add_foreign_key "team_infos", "teams"
+  add_foreign_key "team_infos", "topics"
+  add_foreign_key "team_infos", "users"
 end
