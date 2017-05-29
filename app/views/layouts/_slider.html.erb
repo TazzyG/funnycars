@@ -15,13 +15,17 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active center-block">
+          <h4 class="text-muted"><%= @articles.first.title.titleize %></h4>
           <%= image_tag @articles.first.picture.url(:slider) %>
-          <%= @articles.first.title.titleize %>
+          <br>
+           <em><%= @articles.first.content %></em>
         </div>
         <% @articles.each do |article| %>
           <div class="item center-block">
+            <h4 class="text-muted"><%= article.title.titleize %></h4>
             <%= image_tag article.picture.url(:slider) %>
-            <%= article.title.titleize %>
+            <br>
+            <em><%= article.content %> </em>
           </div>
         <% end %>
       </div>

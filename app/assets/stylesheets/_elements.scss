@@ -5,6 +5,13 @@ body {
      
 }
 
+.text-primary {
+    color: $primary;
+}
+
+.text-info {
+    color: $info;
+}
 html {
     height: 100% !important;
     -ms-overflow-style: scrollbar;
