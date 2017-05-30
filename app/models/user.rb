@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :articles
   has_many :teams
   has_many :team_pictures
+  has_many :rules
 end

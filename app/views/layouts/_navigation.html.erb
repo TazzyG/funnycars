@@ -14,19 +14,13 @@
         <%= link_to "home", root_path(anchor: "page_top")%>      
       </li>
       <li class="page-scroll">
-        <%= link_to "Schedule", root_path(anchor: "about")%>      
-      </li>
-      <li class="page-scroll">
-        <%= link_to "Standings", root_path(anchor: "standings")%>      
-      </li>
-      <li class="page-scroll">
-        <%= link_to "Media", root_path(anchor: "media")%>      
-      </li>
-      <li class="page-scroll">
-        <%= link_to "Photos", root_path(anchor: "about")%>      
+        <%= link_to "Events", root_path(anchor: "about")%>      
       </li>
       <li class="page-scroll">
         <%= link_to "Teams", root_path(anchor: "about")%>      
+      </li>
+      <li class="page-scroll">
+        <%= link_to "Rules", rules_path %>      
       </li>
       <li class= "sign_in">
         <% if user_signed_in? %>
