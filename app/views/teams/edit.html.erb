@@ -1,17 +1,16 @@
-<div class="container text-left" id="edit_article">
+<div class="container text-left" id="newpath">
   <div class = "row">
     <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class= "panel-heading">
-          <h1>Editing <%= @article.title %></h1>
+       <div class="panel panel-default">
+          <div class= "panel-heading">
+            <h1>Edit <%= @team.team_name %></h1>
         </div>
         <div class = "panel-body">
-          <%= render 'form', article: @article  %>
+          <%= render 'form', team: @team %>
         </div>
-		    <div class= "panel-footer">
-        <%= link_to 'Cancel - Show Greeting', @article %> 
-        
-        </div>
+			  <div class= "panel-footer">
+       <%= link_to 'Home', root_path %> |
+       </div>
 		  </div>  
     </div>
   </div>
