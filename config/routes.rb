@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :team_infos
     resources :team_pictures
   end
-  resources :team_pictures
+  
   
   resources :topics
  

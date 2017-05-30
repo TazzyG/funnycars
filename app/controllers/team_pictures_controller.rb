@@ -1,7 +1,7 @@
 class TeamPicturesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_team_picture, only: [:show, :destroy]
-  before_action :set_team
+  before_action :set_team, only: [:show, :destroy]
   
   def create
     @team_picture = @team.team_pictures.create(team_picture_params)
@@ -31,14 +31,15 @@ class TeamPicturesController < ApplicationController
   end
   
   def destroy
+    
     @team_picture.destroy
-    redirect_to team_pictures_url
+    redirect_to @team
   end
   
   
   private
   def set_team_picture
-   @team_picture = @team.team_pictures.find(params[:id])
+   @team_picture = TeamPicture.find(params[:id])
   end
   
   def set_team
