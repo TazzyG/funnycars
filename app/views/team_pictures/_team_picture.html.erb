@@ -1,5 +1,8 @@
 
+<div class = "col-md-6">
+ <%= image_tag team_picture.picture.url if team_picture.picture? %>
 
- <%= image_tag @team.team_pictures.first.picture.url(:preview) %>
- 
-
+ <%= link_to "delete", team_picture, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+                                       
+</div>
