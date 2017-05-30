@@ -3,12 +3,15 @@
     <div class="col-md-10 col-md-offset-1">
       <h2 class= "text-center"> Rocky Mountain Series Basics </h2>
       <h3 class= "text-center"> Association Rules</h3>
-      <hr>
       
-      <em>The Rocky Mountain Funny Car teams have a long history of competing at almost every track in Western Canada. The series has found success in BC Alberta and Saskachewan as a group. As individuals, the teams race all over the NW,and Washington, Oregon, Idaho, Nevada, Arizona and California</em>
+      <div class= "container">
+      <em>The Rocky Mountain Funny Car teams have a long history of competing at almost every track in Western Canada. <br>
+      The series has found success in BC Alberta and Saskachewan as a group.<br> As individuals, the teams race all over the NW,and Washington, Oregon, Idaho, Nevada, Arizona and California</em>
+      </div>
+      <hr>
       <% @rules.each do |rule| %>
-        <p class= "text-center text-primary">
-            <%= rule.number %><%= rule.title.titleize %>
+        <p class= "text-primary">
+            <%= rule.number %>. <%= rule.title.titleize %>
         </p>
         <p> <%= rule.description %>
         <% if rule.picture? %>
