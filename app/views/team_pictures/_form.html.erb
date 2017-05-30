@@ -1,0 +1,24 @@
+<div>
+<%= form_for([@team, @team.team_pictures.build]) do |f| %>
+    <div class="form-group">
+      <%= f.hidden_field :user_id %>
+    </div>
+    <div class="form-group">
+      <%= f.hidden_field :team_id %>
+    </div>
+    <div class="form-group">
+      <%= f.label :picture %>
+      <%= f.file_field :picture, class: "form-control", placeholder: "Select Feature Image" %>
+      <%= f.hidden_field :picture_cache %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "One to Two words" %>
+    </div>
+    
+    <div class="btn-group">
+      <%= f.submit "Submit Team_picture", class: "btn btn-primary" %>
+    </div>
+<% end %>
+</div>
+
+<%= render "shared/image_script" %>

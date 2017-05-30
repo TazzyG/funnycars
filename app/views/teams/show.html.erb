@@ -57,12 +57,19 @@
       <div class="col-md-offset-3 col-md-6">
         <h2> Add More Team Details</h2>
         <%= render "team_infos/form" %>
+        <h2> Add Team Photographs </h2>
+        <%= render "team_pictures/form"%>
       </div>
     </div>
     <% end %>
     <div class= "row">
       <div class= "col-md-offset-1 col-md-10">
         <%= render "team_infos/index" %> 
+      </div>
+    </div>
+    <div class= "row">
+      <div class= "col-md-offset-1 col-md-10">
+       <%= render "team_pictures/team_picture" %> 
       </div>
     </div>
   </div>

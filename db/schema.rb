@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529231947) do
+ActiveRecord::Schema.define(version: 20170530161830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(version: 20170529231947) do
     t.index ["team_id"], name: "index_team_infos_on_team_id"
     t.index ["topic_id"], name: "index_team_infos_on_topic_id"
     t.index ["user_id"], name: "index_team_infos_on_user_id"
+  end
+
+  create_table "team_pictures", force: :cascade do |t|
+    t.string "picture"
+    t.bigint "user_id"
+    t.bigint "team_id"
+    t.integer "event_id"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_team_pictures_on_event_id"
+    t.index ["team_id"], name: "index_team_pictures_on_team_id"
+    t.index ["user_id"], name: "index_team_pictures_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -94,4 +107,6 @@ ActiveRecord::Schema.define(version: 20170529231947) do
   add_foreign_key "team_infos", "teams"
   add_foreign_key "team_infos", "topics"
   add_foreign_key "team_infos", "users"
+  add_foreign_key "team_pictures", "teams"
+  add_foreign_key "team_pictures", "users"
 end
