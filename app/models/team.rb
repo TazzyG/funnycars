@@ -1,6 +1,7 @@
 class Team < ApplicationRecord
   belongs_to :user
   has_many :team_infos
+  has_many :articles
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
   validates :team_name, presence: true, length: { maximum: 140 }

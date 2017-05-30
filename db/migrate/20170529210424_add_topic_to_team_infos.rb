@@ -1,5 +1,6 @@
 class AddTopicToTeamInfos < ActiveRecord::Migration[5.1]
   def change
-    add_reference :team_infos, :topic, foreign_key: true
+    remove_column :team_infos, :topic, :string
+    
   end
 end

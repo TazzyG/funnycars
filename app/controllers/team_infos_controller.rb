@@ -5,15 +5,14 @@ before_action :set_team
 
 # load_and_authorize_resource 
   def index
-    @team_infos = Team_info.all.order('created_at DESC').includes(:user)
+    @team_infos = Team_info.all.order('created_at DESC').includes(:team)
   end
   
   def new
-    
+
   end
   
-   
-    
+  
   
   def create
     @team_info = @team.team_infos.create(team_info_params)
@@ -22,16 +21,10 @@ before_action :set_team
     respond_to do |format|
       if @team_info.save
         # Tell the UserMailer to send a team_info email after save
-        format.html { redirect_to team_team(@team), notice: 'Team_info was successfully created.' }
+        format.html { redirect_to team_path(@team), notice: 'Team_info was successfully created.' }
         format.json { render :show, status: :created, location: team_team(@team) }
-        
-        @team.teams.each do |team|
-          emails = team.team_memberships.pluck(:email)
-          Team_infosMailer.team_info_email(emails, @team, @team_info).deliver
-        end
-         
       else
-        format.html { redirect_to team_team(@team), notice: 'Oops, team_info did not save.' }
+        format.html { redirect_to team_path(@team), notice: 'Oops, team_info did not save.' }
         format.json { render json: @team_info.errors, status: :unprocessable_entity }
       end
     end

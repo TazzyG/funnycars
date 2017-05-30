@@ -1,0 +1,2 @@
+json.extract! team, :id, :team_name, :driver, :home_town, :crew_chief, :crew, :car_name, :car, :engine, :chassis, :picture, :facebook, :youtube, :instagram, :user_id, :created_at, :updated_at
+json.url team_url(team, format: :json)

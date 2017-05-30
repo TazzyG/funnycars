@@ -11,13 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery-ui
 //= require rails-ujs
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require jquery.easing
 //= require scrollReveal
 //= require owl.carousel
+//= require jquery-ui
 //= require_tree .
 
 /* global $*/

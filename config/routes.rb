@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :teams do
     resources :team_infos
   end
+  
   resources :topics
  
   resources :sessions, only: [:new]
