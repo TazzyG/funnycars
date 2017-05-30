@@ -1,0 +1,14 @@
+<% @team.team_pictures.limit(16).each do |team_picture| %>
+<div class= "col-md-4 logo img-responsive center-block">
+<%= image_tag team_picture.picture.url(:medium)%>
+ <br>
+ <%= link_to [team_picture.team, team_picture], method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <span class="glyphicon glyphicon-trash"></span>
+       
+  <% end %>
+<% end %>
+</div>  
+  
+  
+  
+  
