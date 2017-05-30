@@ -1,14 +1,16 @@
 <div class="container text-left" id="newpath">
   <div class = "row">
     <div class="col-md-10 col-md-offset-1">
-      <h2> Rocky Mountain Series Basics </h2>
-      <h3> Association Rules</h3>
+      <h2 class= "text-center"> Rocky Mountain Series Basics </h2>
+      <h3 class= "text-center"> Association Rules</h3>
+      <hr>
+      
       <em>The Rocky Mountain Funny Car teams have a long history of competing at almost every track in Western Canada. The series has found success in BC Alberta and Saskachewan as a group. As individuals, the teams race all over the NW,and Washington, Oregon, Idaho, Nevada, Arizona and California</em>
       <% @rules.each do |rule| %>
         <p class= "text-center text-primary">
-          <%= rule.title.titleize %>
+            <%= rule.number %><%= rule.title.titleize %>
         </p>
-        <p ><%= rule.number %> <%= rule.description %>
+        <p> <%= rule.description %>
         <% if rule.picture? %>
         <br>
         <span class= "logo img-responsive center-block">
