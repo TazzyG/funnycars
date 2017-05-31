@@ -11,19 +11,19 @@
     <ul class="nav navbar-nav">
       <a href='#page-top'></a>
       <li class="page-scroll">
-        <%= link_to "home", root_path(anchor: "page_top")%>      
+        <%= link_to "Home", root_path(anchor: "page_top")%>      
       </li>
       <li>
         <%= link_to "Events", race_schedules_path %>      
       </li>
-      <li class="page-scroll">
-        <%= link_to "Teams", root_path(anchor: "about")%>      
+      <li>
+        <%= link_to "Teams", teams_path %>      
       </li>
       <li>
         <%= link_to "Rules", rules_path %>      
       </li>
       <li> 
-        <%= link_to "Standings", "#" %>
+        <%= link_to "Standings", standings_path %>
       </li>
       <li class= "sign_in">
         <% if user_signed_in? %>

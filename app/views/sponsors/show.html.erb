@@ -1,0 +1,33 @@
+<div class= "container">
+  <div class= "row">
+    <div class="col-md-offset-2 col-md-10">
+      <div>
+       <p> 
+       <%= image_tag @sponsor.picture.url%> <br>
+         <%= @sponsor.company_name %> |
+         <%= @sponsor.web_site %>
+       </p>
+      </div>
+      <div>
+        <div>
+          
+         
+          
+        </div>
+        <div>
+          <p class= "text-primary"> <strong>Helped Us out with</strong> <%= @sponsor.sponsored_with %></p>
+          <p>
+          <%= @sponsor.full_name %> - 
+          <strong>email:</strong> <%= @sponsor.email %> - 
+          <strong>phone:</strong> <%= @sponsor.phone %>
+          </p>
+          <p><strong>guestimated value</strong> $<%= @sponsor.amount %></p>
+        </div> 
+        <div>
+          <%= link_to "home", root_path %> | <%= link_to "Edit", edit_sponsor_path(@sponsor) %>| 
+          <%= link_to "Delete this sponsor", @sponsor, method: :delte, data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

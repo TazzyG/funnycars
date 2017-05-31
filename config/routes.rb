@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   
   resources :race_schedules
   
+  resources :sponsors
+  resources :standings
+  
   resources :topics
  
   resources :sessions, only: [:new]

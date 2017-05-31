@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :team_pictures
   has_many :rules
   has_many :race_schedules
+  has_many :sponsors
 end

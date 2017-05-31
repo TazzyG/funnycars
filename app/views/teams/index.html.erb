@@ -1,77 +1,10 @@
-
-    <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-  <div class="carousel slide intro-slider" data-ride="carousel">
-    <div class="item active">
-      <div class="fill"> <%= image_tag @articles.first.picture.url(:large) %>
-      </div>
-       <div class= "carousel-caption" id="master_event_bottom">
-         
-         <h1> <%= @articles.first.title.titleize %>
-         <%= link_to '#' do %>
-              <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            <% end %>
-        
-         
-            <%= link_to '#' do %>
-              <i class="fa fa-youtube-square" aria-hidden="true"></i>
-            <% end %>
-         
-           
-            <%= link_to '#' do %>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            <% end %>
-          </h1>
-      </div>
-   
+<div class = "row">
+  <div class="col-sm-10 col-sm-offset-1 col-xs-12 event-content">
+    <% @teams.each do |team| %> 
+    <div class="col-md-4">
+    <%= display_poster_with_link(team) %><br>
+    <%= team.team_name %>
     </div>
+    <% end %>
   </div>
 </div>
-<div class= "container">
-    <div class = "row">
-      <div class= "col-md-4">
-        <h2> Team </h2>
-         <h4><span class= "text-primary">Team Name:</span> Road Hammers Racing </h4>
-         <h4><span class= "text-primary">Driver: </span> age 54, married to Anne Lamers. Owner of Home Style Construction LTD</h4>
-         <p><span class= "text-primary">Home Town:</span> Edmonton, Alberta</p>
-         <p><span class= "text-primary">Crew Chief</span> Cal & Matt</p>
-         <p><span class= "text-primary">Crew:</span> Anne Lamers, Matt Barnes, Trevor Steinkey and Rachel Lewis</p>
-      </div>   
-    
-    
-      <div class= "col-md-4">
-       <h2> Car Details</h2>
-         <h3><span class="text-primary"> Name:</span>"The Big Car"</h3>
-         <p><span class= "text-primary"> Car:</span> 1969 GTO "THE JUDGE"</p>
-         <p><span class= "text-primary"> Engine:</span> Alan Johnson 481x 526 cu in, Kolbelco 14-71</p>
-         <p><span class= "text-primary"> Chassis:</span> 2000 McKinney 125" Top fuel funny car chassis</p>
-      </div>   
-    
-    
-      <div class= "col-md-4">
-       <h2> Events This Year</h2>
-         <p><%= link_to "Amazing Event Bahahah", "#" %>: June 5 at some place, Edmonton, AB</p>
-         <p><%= link_to "Rocking Stirstix, Let's go", "#" %>: July 2 at another place, Bakersfield, Ca</p>
-         <p><%= link_to "Uptown Rockers in the Chassis", "#" %>: July 5 at another place, Helena, Montana</p>
-      </div>   
-    </div>
-    <hr>
-    <div class= "row">
-    <div class= "col-offset-1 col-md-10">
-      <p><span class= "text-primary"> Sponsors:</span> Home Style Constructions, Trail Tire, Boycuck Venture, HDF Race Car Insurance</p> 
-      <p><span class= "text-primary"> Performance Bests:</span> 6.74 @209mph</p>
-      <p><span class= "text-primary"> History of the team:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
-      <p><span class= "text-primary"> Drag Racing History:</span> 
-      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix, sed propriae tractatos ad, vis te magna dicat iriure. Agam alterum apeirian his at. Ea vix maiorum pericula, scaevola scribentur ea vim.
-      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
-      <p><span class= "text-primary"> Career highlights:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
-      <p><span class= "text-primary"> Current racing plans:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
-      <p><span class= "text-primary"> Future Goals:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
-      <p><span class= "text-primary"> Favorite Racing Moments:</span> 
-      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix, sed propriae tractatos ad, vis te magna dicat iriure. Agam alterum apeirian his at. Ea vix maiorum pericula, scaevola scribentur ea vim.
-      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix</p>
-      <p><span class= "text-primary"> Heros of the sport:</span> Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix
-      Lorem ipsum dolor sit amet, mazim dolor hendrerit ius in. Vix cu elit quas efficiantur. At noster maiorum neglegentur vix, sed propriae tractatos ad, vis te magna dicat iriure. Agam alterum apeirian his at. Ea vix maiorum pericula, scaevola scribentur ea vim.
-      </p>
-    </div>
-    </div>
-  </div>

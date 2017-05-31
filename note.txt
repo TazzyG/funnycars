@@ -9,3 +9,9 @@ The postgresql section in this link helped https://gorails.com/deploy/ubuntu/16.
 NGINX Do not leave home with out this link
 https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/trusty/deploy_app.html
 
+
+
+Things to do post launch:
+Grey out old events and make an past years events link
+Suggest they add a pdf or info on why sponsoring is awesome(optional)
+Add more to articles, feature button, archive, select_team, select events

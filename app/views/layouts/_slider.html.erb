@@ -1,65 +1,57 @@
 
 <div class="row intro">
   <div class="col-md-offset-1 col-md-6">
-    <% if current_user %>
-      <h2>Add A Slider Image</h2>
-      <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
-      <h2>Add A Team Page</h2>
-      <%= link_to "New Team", new_team_path, class: "btn btn-primary" %>
-      <h2>Add A New Event to the Schedule</h2>
-      <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
-    <% else %>
-    <div>
-  
-      </div>
-      <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
-     
-      <!-- Indicators -->
-      
-      <!-- Wrapper for slides -->
+    <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active center-block">
-          
           <em>Nitro belching array on display at the 61st Annual World Series of Drag Racing at Cordova Dragway Park 8-23-14</em>
           <iframe width="700" height="350" src="https://www.youtube.com/embed/rl65fS89JSE" frameborder="0" allowfullscreen></iframe>
           <br>
           <h4 class="text-muted">Nitro Madness</h4>
-           
         </div>
         <% @articles.each do |article| %>
           <div class="item center-block">
             <em><%= article.content %> </em>
-            
             <%= image_tag article.picture.url(:slider) %>
             <br>
             <h4 class="text-muted"><%= article.title.titleize %></h4>
           </div>
+          
         <% end %>
       </div>
-
-  <!-- Left and right controls -->
-  
-</div>
-    <% end %>
-  </div>
-  <div class="col-md-5 sponsors">
-    <% if current_user %>
-      <h2>Edit the Sponsor Logos</h2>
-    <% else %>
-      <div>
-    <%= link_to href: 'http://www.trailtire.com/' do %>
-      <span class= "logo img-responsive center-block">
-        <%= image_tag  "trailtirethumb.png" %>
-      </span>
-    <% end %>
     </div>
-      <div>
-        <%= link_to href: 'https://surewerx.com/' do %>
-          <span class= "logo img-responsive center-block">
-            <%= image_tag  "surewerx.png" %>
-          </span>
-        <% end %>
-      </div>
+    <% if current_user %>
+      <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
+      <%= link_to "New Team", new_team_path, class: "btn btn-primary" %>
+      <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
     <% end %>
+    <section class= "text-left">
+      <h3>Laurie's Message to Shane</h3>
+      <p>This site needs content and we are through the first part</p>
+      <p>I have added the rules page, teams pages, slider and sponsors</p>
+      <p>Once you have the pictures(slider), teams, and events, I can do some more work</p>
+      <h4>Final Steps After Content is Up</h4>
+      <p>Put Events and List of teams on front page, it will come from your content</p>
+      <p>I will also do some more work so Results are shown on the team pages and we can add pics to events, etc.</p>
+    </section>
+  </div>
+  
+  
+  <div class="col-md-5 sponsors">
+    <% @sponsors.each do |sponsor| %>
+    <div>
+      <%= link_to href: sponsor.web_site do %>
+        <span class= "logo img-responsive center-block">
+          <% end %>
+          <%= image_tag sponsor.picture.url %>
+          <% if current_user %>
+          <%= link_to "View or Edit", sponsor %>
+        </span>
+      <% end %>
+    <% end %> 
+    </div>
+    <div class= "text-center">
+    <%= link_to "Add aNew Sponsor", new_sponsor_path, class: "btn btn-primary" %>
+    </div>
   </div>
 </div>

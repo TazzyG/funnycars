@@ -1,0 +1,50 @@
+<%= form_for(@sponsor, html: { multipart: true }) do |f| %>
+  <% if @sponsor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sponsor.errors.count, "error") %> prohibited this sponsor from being saved:</h2>
+
+      <ul>
+      <% sponsor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="form-group">
+      <%= f.hidden_field :user_id %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :company_name, autofocus: true, class: "form-control", placeholder: "Company Name" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :web_site, autofocus: true, class: "form-control", placeholder: "http://example.com" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :picture %>
+      <%= f.file_field :picture, class: "form-control", placeholder: "Select Logo Image" %>
+      <%= f.hidden_field :picture_cache %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "Sponsor's First Name" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :last_name, autofocus: true, class: "form-control", placeholder: "Sponsor's Last Name" %>
+    </div>
+    <div class="form-group">
+      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Sponsor's Email" %>
+    </div>
+    <div class="form-group">
+      <%= f.telephone_field :phone, autofocus: true, class: "form-control", placeholder: "Sponsor's Phone no(s)" %>
+    </div>
+    <div class = "form-group">
+      <%= f.text_field :sponsored_with, autofocus: true, class: "form-control", placeholder: "Describe what the sponsor provided" %>
+    </div>
+    <div class = "form-group">
+      <%= f.number_field :amount, autofocus: true, class: "form-control", placeholder: "estimated value" %>
+    </div>
+    <div class="btn-group">
+      <%= f.submit "Submit sponsor", class: "btn btn-primary" %>
+    </div>
+<% end %>
+
+<%= render "shared/image_script" %>

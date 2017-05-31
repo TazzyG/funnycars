@@ -9,6 +9,10 @@ module ApplicationHelper
     end
   end
   
+  def display_poster_with_link(post)
+  		link_to image_tag(post.picture.url(:medium)), post
+  end
+  
   def active_class(link_path)
     current_page?(link_path) ? 'active' : ""
   end
