@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170531000250) do
     t.bigint "user_id"
     t.datetime "race_start_date"
     t.datetime "race_end_date"
+    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_race_schedules_on_user_id"

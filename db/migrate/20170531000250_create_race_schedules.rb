@@ -8,6 +8,7 @@ class CreateRaceSchedules < ActiveRecord::Migration[5.1]
       t.references :user
       t.datetime :race_start_date
       t.datetime :race_end_date
+      t.string :color
 
       t.timestamps
     end

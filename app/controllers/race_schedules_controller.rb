@@ -46,6 +46,6 @@ class RaceSchedulesController < ApplicationController
    @race_schedule = RaceSchedule.find(params[:id])   
   end
   def race_schedule_params
-    params.require(:race_schedule).permit(:dates, :location, :details, :race_type, :race_start_date, :race_end_date)
+    params.require(:race_schedule).permit(:dates, :location, :details, :race_type, :race_start_date, :race_end_date, :color)
   end
 end
