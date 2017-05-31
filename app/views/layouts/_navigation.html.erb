@@ -13,6 +13,7 @@
       <li class="page-scroll">
         <%= link_to "Home", root_path(anchor: "page_top")%>      
       </li>
+      <%= if user_signed_in? %>
       <li>
         <%= link_to "Events", race_schedules_path %>      
       </li>
