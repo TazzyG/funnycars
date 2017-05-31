@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530214440) do
+ActiveRecord::Schema.define(version: 20170531000250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(version: 20170530214440) do
     t.index ["event_id"], name: "index_articles_on_event_id"
     t.index ["team_id"], name: "index_articles_on_team_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "race_schedules", force: :cascade do |t|
+    t.string "location"
+    t.string "details"
+    t.string "race_type"
+    t.bigint "user_id"
+    t.datetime "race_start_date"
+    t.datetime "race_end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_race_schedules_on_user_id"
   end
 
   create_table "rules", force: :cascade do |t|

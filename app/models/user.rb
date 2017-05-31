@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :teams
   has_many :team_pictures
   has_many :rules
+  has_many :race_schedules
 end

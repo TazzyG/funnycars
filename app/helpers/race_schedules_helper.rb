@@ -1,0 +1,2 @@
+module RaceSchedulesHelper
+end

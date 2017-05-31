@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   end
   resources :rules
   
+  resources :race_schedules
+  
   resources :topics
  
   resources :sessions, only: [:new]
