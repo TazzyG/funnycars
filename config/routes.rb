@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resources :event_teams
   end
   
+  resources :event_teams
+  
   resources :sponsors
   resources :standings
   

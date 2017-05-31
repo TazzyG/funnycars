@@ -1,7 +1,7 @@
 <p>
-  <%= event_team.race_schedule.title.upcase %> <%= event_team.team.name %>
-  <%= link_to "Remove Team", [event_team.race_schedule, event_team]
+  <%= event_team.race_schedule.details %> <%= event_team.team.team_name %>
+  <%= link_to "Remove Team", [event_team.race_schedule, event_team],
         method: :delete, 
         data: {confirm: 'Are you sure?' } %>
-  <% end %>
+  
 </p>
