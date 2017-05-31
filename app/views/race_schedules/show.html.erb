@@ -9,6 +9,9 @@
         <%= @race_schedule.details %>
         <%= @race_schedule.race_type %>. 
     </p>
+    <h3>Add a Team to the Event</h3>
+    <%= render @race_scheduler.event_teams %> 
+    <%= render "event_teams/form"%> 
     </div>
   </div>
 </div>

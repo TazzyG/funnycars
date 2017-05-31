@@ -1,0 +1,10 @@
+class CreateEventTeams < ActiveRecord::Migration[5.1]
+  def change
+    create_table :event_teams do |t|
+      t.references :race_schedule, foreign_key: true
+      t.references :team, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end

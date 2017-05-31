@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   resources :teams do
     resources :team_infos
     resources :team_pictures
+    resources :event_teams
   end
   resources :rules
   
-  resources :race_schedules
+  resources :race_schedules do
+    resources :event_teams
+  end
   
   resources :sponsors
   resources :standings

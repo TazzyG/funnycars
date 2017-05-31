@@ -1,0 +1,16 @@
+<%= form_for([@race_schedule.event_teams.build]) do |f| %>
+  <div class= "form-group">
+    <%= f.hidden_field :race_schedule_id %>
+  </div>
+  <div class= "form_tag">
+    <%= f.label :Team %> <br>
+    <%= f.collection_select(:team_id, 
+          Team.all, 
+          :id,
+          :name) %>
+  </div>
+  <div class="actions btn-group">
+    <%= f.submit "Submit", class: "btn" %>
+  </div>
+
+<% end %>
