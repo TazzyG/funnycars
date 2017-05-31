@@ -23,11 +23,11 @@
           </tr>
         </thead>
         <tbody>
-        <tr>
+        <tr style= "color: <%= race_schedule.color %>" >
           <td><%= race_schedule.race_start_date.strftime("%F") %> - 
           <%= race_schedule.race_end_date.strftime("%F") %>
           </td>
-          <td><%= race_schedule.location %>
+          <td><%= link_to race_schedule.location, race_schedule %>
           </td>
           <td><%= race_schedule.details %>
           </td>

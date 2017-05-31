@@ -1,7 +1,8 @@
 <div class= "containter text-left">
   <div class= "row">
     <div class= "col-md-offset-1 col-md-10">
-    <p>
+    <p style= "color:<%= @race_schedule.color %>">
+      
         <%= @race_schedule.race_start_date.strftime("%F")%>
         <%= @race_schedule.race_end_date.strftime("%F")%>
         <%= @race_schedule.location %>
