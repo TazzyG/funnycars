@@ -3,11 +3,7 @@
 <div class = "row">
   <div class = "col-md-offset-2 col-md-8">
     <p>
-      <% if news_feed.date_of_post != nil %>
-        <%= news_feed.date_of_post.strftime("%F") %>
-      <% else %>
-        <%= news_feed.created_at.strftime("%F") %>
-      <% end %>
+      <%= news_feed.created_at.strftime("%F") %>
     </p>
     <p> <%= news_feed.content %></p>
     <p> 
