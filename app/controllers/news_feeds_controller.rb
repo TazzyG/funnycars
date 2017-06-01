@@ -3,7 +3,7 @@ class NewsFeedsController < ApplicationController
   before_action :set_news_feed, only: [:show, :edit, :update, :destroy]
   
   def index
-    @news_feeds = NewsFeed.all
+    @news_feeds = NewsFeed.all.order("created_at DESC ").limit(30)
   end
   
   def show
