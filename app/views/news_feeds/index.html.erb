@@ -1,0 +1,7 @@
+<div class = "container">
+<% @news_feeds.each do |news_feed| %>
+<%= image_tag news_feed.picture.url(:thumb) %>
+
+<% end %> 
+
+</div>
