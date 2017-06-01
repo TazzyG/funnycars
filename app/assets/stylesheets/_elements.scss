@@ -121,6 +121,10 @@ body {
     webkit-tap-highlight-color: fade($primary, 50%);
 }
 
+.panel {
+    color: $dark;
+}
+
 // Owl Carousel Color Overrides
 
 .owl-theme .owl-controls .owl-page span {

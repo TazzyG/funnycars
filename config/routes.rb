@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   
   resources :news_feeds
   
+  get '/photos2010', to: 'archives#photos_2010'
+  
+  
   resources :sponsors
   resources :standings
   

@@ -5,6 +5,7 @@ class NewsFeed < ApplicationRecord
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 140 }
+  validates :picture, presence: true
   
   validate  :picture_size
   private
