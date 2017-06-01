@@ -1,0 +1,44 @@
+<%= form_for(@news_feed, html: { multipart: true }) do |f| %>
+  <% if @news_feed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(news_feed.errors.count, "error") %> prohibited this news_feed from being saved:</h2>
+
+      <ul>
+      <% news_feed.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="form-group">
+      <%= f.hidden_field :user_id %>
+    </div>
+    <div class="form-group">
+      <%= f.label :picture %>
+      <%= f.file_field :picture, class: "form-control", placeholder: "Select Feature Image" %>
+      
+    </div>
+    <div class="form-group">
+      <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "One to Two words" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :content, autofocus: true, class: "form-control", placeholder: "Summary Information, max a paragraph" %>
+    </div>
+    <div class= "form_tag">
+    <%= f.label :Team %> <br>
+    <%= f.collection_select(:team_id, 
+          Team.all, 
+          :id,
+          :team_name, include_blank:true) %>
+    </div>
+   
+    <div class="form-group">
+      <%= f.date_select :date_of_post, autofocus: true, class: "form-control" %>
+    </div>
+    
+    <div class="btn-group">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+<% end %>
+
+<%= render "shared/image_script" %>

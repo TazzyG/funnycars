@@ -1,0 +1,29 @@
+<div class="container" id:"show_news_feed" >
+  <div class="row">
+    <div class= "col-md-10 col-md-offset-1">
+      <div class= "panel panel-default">
+        <div class="panel-heading">
+          <h3><%= @news_feed.title %></h3>
+          <p><%= @news_feed.date_of_post %></p>
+          <p>
+            <%= link_to 'An an Other Post', new_news_feed_path, class: "btn btn-primary" %>
+          </p>
+        </div>
+        <div class="panel-body">
+         
+            <p><%= image_tag @news_feed.picture.url(:slider) %></p>
+            <p><strong>Title: </strong>  <%= @news_feed.title %></h3>
+          
+          <p><strong>Info: </strong><%= @news_feed.content %></p>
+        </div>
+        <div class="panel-footer">
+          <% if current_user %>
+            <%= link_to 'Edit', edit_news_feed_path(@news_feed) %> | 
+            <%= link_to 'Delete', @news_feed, method: :delete, data: { confirm: "Are you sure?" } %> | 
+          <% end %>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

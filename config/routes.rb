@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   
   resources :event_teams
   
+  resources :news_feeds
+  
   resources :sponsors
   resources :standings
   

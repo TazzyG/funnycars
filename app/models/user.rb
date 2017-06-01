@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :rules
   has_many :race_schedules
   has_many :sponsors
+  has_many :news_feeds
 end

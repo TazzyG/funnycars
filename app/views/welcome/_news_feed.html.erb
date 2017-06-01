@@ -1,0 +1,19 @@
+<% @news_feeds.each do |news_feed| %>
+
+<div class = "row">
+  <div class = "col-md-offset-2 col-md-8">
+    <p>
+      <% if news_feed.date_of_post != nil %>
+        <%= news_feed.date_of_post.strftime("%F") %>
+      <% else %>
+        <%= news_feed.created_at.strftime("%F") %>
+      <% end %>
+    </p>
+    <p> <%= news_feed.content %></p>
+    <p> 
+    <%= image_tag news_feed.picture.url if news_feed.picture %>
+    </p>
+  </div>
+</div>
+
+<% end %>

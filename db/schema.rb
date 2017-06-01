@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170531200624) do
+ActiveRecord::Schema.define(version: 20170531230814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,22 @@ ActiveRecord::Schema.define(version: 20170531200624) do
     t.datetime "updated_at", null: false
     t.index ["race_schedule_id"], name: "index_event_teams_on_race_schedule_id"
     t.index ["team_id"], name: "index_event_teams_on_team_id"
+  end
+
+  create_table "news_feeds", force: :cascade do |t|
+    t.integer "race_schedule_id"
+    t.bigint "user_id"
+    t.integer "team_id"
+    t.datetime "date_of_post"
+    t.string "picture"
+    t.string "title"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["date_of_post"], name: "index_news_feeds_on_date_of_post"
+    t.index ["race_schedule_id"], name: "index_news_feeds_on_race_schedule_id"
+    t.index ["team_id"], name: "index_news_feeds_on_team_id"
+    t.index ["user_id"], name: "index_news_feeds_on_user_id"
   end
 
   create_table "race_schedules", force: :cascade do |t|
@@ -155,6 +171,7 @@ ActiveRecord::Schema.define(version: 20170531200624) do
   add_foreign_key "articles", "users"
   add_foreign_key "event_teams", "race_schedules"
   add_foreign_key "event_teams", "teams"
+  add_foreign_key "news_feeds", "users"
   add_foreign_key "sponsors", "users"
   add_foreign_key "team_infos", "teams"
   add_foreign_key "team_infos", "topics"
