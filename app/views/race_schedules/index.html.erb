@@ -1,6 +1,9 @@
 <div class= "container">
   <div class="row">
     <div class= "col-md-offset-2 col-md-8">
+      <% if current_user %>
+        <%= link_to "add a new race event", new_race_schedule_path, class: 'btn btn-primary' %>
+      <% end %>
       <table class= "table table-responsive">
       <thead>
         <tr>
