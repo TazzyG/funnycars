@@ -12,7 +12,10 @@
         <% @articles.each do |article| %>
           <div class="item center-block">
             <em><%= article.content %> </em>
-            <%= image_tag article.picture.url(:slider) %>
+            <% if current_user %> 
+              <%= link_to "EDIT", edit_article_path(article) %>
+            <% end %>
+            <%= image_tag article.picture.url(:slider) %> 
             <br>
             <h4 class="text-muted"><%= article.title.titleize %></h4>
           </div>
@@ -25,15 +28,7 @@
       <%= link_to "New Team", new_team_path, class: "btn btn-primary" %>
       <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
     <% end %>
-    <div class= "text-left">
-      <h3>Laurie's Message to Shane</h3>
-      <p>You neeed to add Teams and Events</p>
-      <p>I have made the logos editable, and you can also add sponsors</p>
-      <p>I have added the rules page, team pages, slider and sponsors</p>
-      <p>The menus are all working now</p>
-      <p>Keep in mind, you can add content any time. <br> For now, we just want to make the site friendly</p>
-      <em class= "text-primary"> Have Fun!</em>
-    </div>
+    
   </div>
   
   
