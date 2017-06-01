@@ -1,6 +1,6 @@
 <div class = "container">
 <% @news_feeds.each do |news_feed| %>
-<%= image_tag news_feed.picture.url(:thumb) %>
+<%= link_to image_tag(news_feed.picture.url(:thumb)), news_feed %>
 
 <% end %> 
 
