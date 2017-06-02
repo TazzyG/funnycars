@@ -1,0 +1,9 @@
+<div class = "container">
+<% @photos_2016.each do |news_feed| %>
+  <% if news_feed.title == "2016" %>
+    <%= link_to image_tag(news_feed.picture.url(:thumb)), news_feed %>
+  <% end %>
+
+<% end %> 
+
+</div>
