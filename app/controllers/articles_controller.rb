@@ -16,7 +16,6 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-    @article.feature = true
     if @article.save
       redirect_to @article, notice: 'Article was successfully created'
     else
@@ -46,6 +45,6 @@ class ArticlesController < ApplicationController
    @article = Article.find(params[:id])   
   end
   def article_params
-    params.require(:article).permit(:title, :content, :picture, :picture_cache, :event_id, :event_date, :user_id, :feature, :archive)
+    params.require(:article).permit(:title, :content, :picture, :picture_cache, :user_id)
   end
 end

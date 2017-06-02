@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   belongs_to :user
-  belongs_to :team
+  
   
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
