@@ -1,31 +1,48 @@
-<footer>
-<div class="container">
-      <div class = "row">
-        <div class = "col-md-4">
-            
-            
-            <%= link_to "Pictures 2016", photos2016_path %><br>
-            <%= link_to "Pictures 2015", photos2014_path %><br>
-            <%= link_to "Pictures 2013", photos2013_path %><br>
-            <%= link_to "Pictures 2012", photos2012_path %><br>
-            <%= link_to "Pictures 2011", photos2011_path %><br>
-            <%= link_to "Pictures 2010", photos2010_path %>
-          </div>
-          <div clas = "col-md-4">
-          </div>
-         <div class = "col-md-4">
-          Phone: Cal Teb at 780 499-6179 <br>
-          <a href="mailto:caltebb@hotmail.com">Email Call Tebb</a>
-          <a href="mailto:joey@joeysplace.com">Email Joey</a> 
-    <br>
+<footer class="footer">
+  <div class="upper">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="script">
+          Rocky Mountain <br>Nostalgia Funny Cars
+        </h4> 
+      </div>
+      <div class="col-md-4">
+          <h4>Browse Pictures</h4>
+          <ul class="list-unstyled footer-links">
+          <li><%= link_to "2014", photos2014_path %> | <%= link_to "2015", photos2015_path %> | <%= link_to "2016", photos2016_path %></li>
+          <li><%= link_to "2010", photos2010_path %> | <%= link_to "2011", photos2011_path %> | <%= link_to "2012", photos2012_path %></li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Contact</h4>
+        <ul class="list-unstyled footer-links">
+          <li>
+              Phone: Cal Teb at 780 499-6179
+          </li>
+          <li> 
+              <a href="mailto:caltebb@hotmail.com">Email Call Tebb</a><br>
+              <a href="mailto:joey@joeysplace.com">Email Joey</a>
+          </li>
+          <li>
             Find us on 
             <%= link_to "https://www.faceboo.com/RockyMountainNotalgiaFunnyCars" do %>
              <i class="fa fa-facebook-square fa-2x" > </i>
             <% end %>
-          </div>
-          
-          
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  <div class="lower">
+    <div class="container">
+      <div class="row text-muted">
+        <div class="col-md-12">
+            <span class="small">Copyright &copy; <span id="year"><%= Date.today.year %></span> - Rocky Mountain Floppers  All Rights Reserved.</span>
+        </div>
       </div>
     </div>
-   
+  </div>
 </footer>
