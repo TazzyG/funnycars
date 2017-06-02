@@ -11,7 +11,9 @@
     <% @teams.each do |team| %> 
     <div class="col-md-4">
     <%= display_poster_with_link(team) %><br>
+    <div class = "text-center text-info">
     <%= team.team_name %>
+    </div>
     </div>
     <% end %>
   </div>
