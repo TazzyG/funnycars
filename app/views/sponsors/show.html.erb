@@ -24,8 +24,11 @@
           <p><strong>guestimated value</strong> $<%= @sponsor.amount %></p>
         </div> 
         <div>
-          <%= link_to "home", root_path %> | <%= link_to "Edit", edit_sponsor_path(@sponsor) %>| 
+          <%= link_to "Home", root_path %> | <%= link_to "Edit", edit_sponsor_path(@sponsor) %>| 
+          <%= link_to "List of All Sponsor Logos", sponsors_path %> |
           <%= link_to "Delete this sponsor", @sponsor, method: :delte, data: { confirm: "Are you sure?" } %>
+          
+
         </div>
       </div>
     </div>

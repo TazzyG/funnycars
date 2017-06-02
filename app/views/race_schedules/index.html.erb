@@ -2,7 +2,9 @@
   <div class="row">
     <div class= "col-md-offset-2 col-md-8">
       <% if current_user %>
-        <%= link_to "add a new race event", new_race_schedule_path, class: 'btn btn-primary' %>
+        <%= link_to "New Event", new_race_schedule_path, class: 'btn btn-primary' %>
+      
+        <em class= "text-info"> <i class = "fa fa-car"> </i> Click on the red link in event below to edit or delete</em>
       <% end %>
       <table class= "table table-responsive">
       <thead>

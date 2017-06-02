@@ -19,6 +19,14 @@
         <span class= "logo img-responsive center-block">
         <%= image_tag rule.picture.url(:slider) if rule.picture? %>
         </span>
+          <% if current_user %>
+          <p>
+          <%= link_to "Show Rule", rule %> | 
+          <%= link_to "Edit this rule", edit_rule_path(rule) %> |
+          <%= link_to "Delete thi rule", rule, method: :delete, 
+            data: {confirm: "Are you sure?" } %>
+            <% end %>
+          </p>
         <% end %>
         </p>
 	    <% end %>	   

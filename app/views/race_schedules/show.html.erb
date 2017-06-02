@@ -15,6 +15,9 @@
     </div>
   </div>
   <div class = "text-center">
-   <%= link_to "add new race event", new_race_schedule_path, class: "btn btn-primary" %>
+   <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
+   <%= link_to "Edit Event", edit_race_schedule_path(@race_schedule), class: "btn btn-info" %>
+   <%= link_to "Delete Event", @race_schedule, method: :delete, 
+     data: {confirm: "Are you sure?" }, class: 'btn btn-warning' %>
   </div>
 </div>

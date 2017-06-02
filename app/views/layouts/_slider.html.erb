@@ -35,7 +35,7 @@
   <div class="col-md-5 sponsors">
     <% @sponsors.each do |sponsor| %>
     <div>
-      <%= link_to href: sponsor.web_site do %>
+      <%= link_to sponsor.web_site, target: '_blank' do %>
         <span class= "logo img-responsive center-block">
           <% end %>
           <%= image_tag sponsor.picture.url %>

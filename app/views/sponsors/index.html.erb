@@ -1,10 +1,23 @@
-<% @sponsors.each do |sponsor| %>
-  <div>
-    <%= link_to href: sponsor.web_site do %>
-      <span class= "logo img-responsive center-block">
-        <%= image_tag sponsor.picture.url %>
-        <% if current_user %>
-        <%= link_to "View or Edit", sponsor %>
-      </span>
-    <% end %>
-<% end %> 
+<% if current_user %>
+<div class = "text-center">
+  
+  <% @sponsors.each do |sponsor| %>
+    <div>
+      <%= link_to sponsor.web_site, target: '_blank' do %>
+        <span class= "logo img-responsive center-block">
+          <%= image_tag sponsor.picture.url %>
+          <% if current_user %>
+          <%= link_to "View or Edit", sponsor %>
+          <% end %>
+        </span>
+      <% end %>
+    </div>
+  <% end %> 
+
+</div>
+<% else %>
+
+<div class = "text-center" %>
+  
+  <h4> Ask us about our Sponsorship Opportunties</h4>
+</div>

@@ -9,6 +9,13 @@
         <%= image_tag @rule.picture.url(:slider) %>
         <% end %>
     </p>
+     <p>
+      <%= link_to "Show Rule", @rule %> | 
+      <%= link_to "Edit this rule", edit_rule_path(@rule) %> |
+      <%= link_to "Delete thi rule", @rule, method: :delete, 
+        data: {confirm: "Are you sure?" } %>
+        <% end %>
+      </p>
     </div>
   </div>
 </div>

@@ -43,5 +43,7 @@ List of dumbass errors and dev notes.
 I know there are lots of duplicate models, articles, news_feed, sponsors... For now, kept separate as workflow is so different for each
 Churned on drop down colors, ended up simply adding a ';' at the end of my css
 
+fixed broken links on sponsor logos
+
 
 
