@@ -17,7 +17,9 @@ Suggest they add a pdf or info on why sponsoring is awesome(optional)
 Add more to articles, feature button, archive, select_team, select events
 
 Prelaunch Bug list:
-1) Race_Schedule create broken in production
+1) Race_Schedule create broken in production:
+    hmmm, it doesn't like my color form select, that's OK for now, I will put some code in once Shane adds a few events
+    
 2) Edit and Delete needed for index and show pages, some are missing (team)
 3) Landing page, logical way to show news_feed without clutter
 4) Standings Model

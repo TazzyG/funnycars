@@ -1,5 +1,10 @@
 <% if current_user %>
-  <%= link_to "add a new team", new_team_path, class: 'btn btn-primary' %>
+<div class = "text-center">
+  <%= link_to "Add a new team", new_team_path, class: 'btn btn-primary' %> 
+  <%= link_to "Edit this team", edit_team_path(@team), class: 'btn btn-info' %> 
+  <%= link_to "Delete this team", @team, method: :delete,
+        data: {confirm: "Are you sure?" }, class: 'btn btn-warning' %>
+</div>
 <% end %>
 
 <div class= "row" >
