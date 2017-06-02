@@ -23,6 +23,8 @@
   }
   
 
+  
+
 
 
 
@@ -30,11 +32,17 @@
 
 
 @media (min-width: 768px) {
-    
+    .news_feed_image {
+      padding: 1%;
+    }
     
     .carousel-inner > .item > img {
       max-width: 700px;
       max-height: 350px;
+    }
+    
+    .carousel-inner > .item > .slider_content {
+      height: 50px;
     }
     
     .navbar .navbar-nav {

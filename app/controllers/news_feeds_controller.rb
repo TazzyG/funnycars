@@ -13,6 +13,11 @@ class NewsFeedsController < ApplicationController
     @news_feed = current_user.news_feeds.build
   end
   
+  def nl2br(s)
+    @s.gsub(/\n/, '<br>')
+  end
+  
+  
   def create
     @news_feed = NewsFeed.new(news_feed_params)
     @news_feed.user_id = current_user.id

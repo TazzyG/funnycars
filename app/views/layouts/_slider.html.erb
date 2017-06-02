@@ -1,52 +1,54 @@
-
-<div class="row intro">
-  <div class="col-md-offset-1 col-md-6">
-    <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active center-block">
-          <em>Nitro belching array on display at the 61st Annual World Series of Drag Racing at Cordova Dragway Park 8-23-14</em>
-          <iframe width="700" height="350" src="https://www.youtube.com/embed/rl65fS89JSE" frameborder="0" allowfullscreen></iframe>
-          <br>
-          <h4 class="text-muted">Nitro Madness</h4>
-        </div>
-        <% @articles.each do |article| %>
-          <div class="item center-block">
-            <em><%= article.content %> </em>
-            <% if current_user %> 
-              <%= link_to "EDIT", edit_article_path(article) %>
-            <% end %>
-            <%= image_tag article.picture.url(:slider) %> 
+<div class = "container">
+  <div class="row intro">
+    <div class="col-md-offset-1 col-md-6">
+      <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active center-block">
+            <div class= "slider_content">
+              <em>Welcome to the <%= Time.current.year %> season! Things are heating up. We hope to see you at the events!</em>
+            </div>
+            <%= image_tag @articles.sample.picture.url(:slider) %>
             <br>
-            <h4 class="text-muted"><%= article.title.titleize %></h4>
+            <h4 class="text-muted slider_content"> Welcome</h4>
           </div>
-          
-        <% end %>
-      </div>
-    </div>
-    <% if current_user %>
-      <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
-      <%= link_to "New Team", new_team_path, class: "btn btn-primary" %>
-      <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
-    <% end %>
-    
-  </div>
-  
-  
-  <div class="col-md-5 sponsors">
-    <% @sponsors.each do |sponsor| %>
-    <div>
-      <%= link_to sponsor.web_site, target: '_blank' do %>
-        <span class= "logo img-responsive center-block">
+          <% @articles.each do |article| %>
+            <div class="item center-block">
+              <div class= "slider_content">
+                <em><%= article.content %> </em>
+              </div>
+              <% if current_user %> 
+                <%= link_to "EDIT", edit_article_path(article) %>
+              <% end %>
+              <%= image_tag article.picture.url(:slider) %> 
+              <br>
+              <h4 class="text-muted slider_content"><%= article.title.titleize %></h4>
+            </div>
           <% end %>
-          <%= image_tag sponsor.picture.url %>
-          <% if current_user %>
-          <%= link_to "View or Edit", sponsor %>
-        </span>
+        </div>
+      </div>
+      <% if current_user %>
+        <%= link_to "New Picture", new_article_path, class: "btn btn-primary" %>
+        <%= link_to "New Team", new_team_path, class: "btn btn-primary" %>
+        <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
+        <%= link_to "Post to Newsfeed", new_news_feed_path, class: "btn btn-primary" %>
       <% end %>
-    <% end %> 
     </div>
-    <div class= "text-center">
-    <%= link_to "Add aNew Sponsor", new_sponsor_path, class: "btn btn-primary" %>
+    <div class="col-md-5 sponsors">
+      <% @sponsors.each do |sponsor| %>
+      <div>
+        <%= link_to sponsor.web_site, target: '_blank' do %>
+          <span class= "logo img-responsive center-block">
+            <% end %>
+            <%= image_tag sponsor.picture.url %>
+            <% if current_user %>
+            <%= link_to "View or Edit", sponsor %>
+          </span>
+        <% end %>
+      <% end %> 
+      </div>
+      <div class= "text-center">
+      <%= link_to "Add aNew Sponsor", new_sponsor_path, class: "btn btn-primary" %>
+      </div>
     </div>
   </div>
 </div>

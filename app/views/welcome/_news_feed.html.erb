@@ -1,15 +1,21 @@
-<% @news_feeds.each do |news_feed| %>
-
-<div class = "row">
-  <div class = "col-md-offset-2 col-md-8">
-    <p>
-      <%= news_feed.created_at.strftime("%F") %>
-    </p>
-    <p> <%= news_feed.content %></p>
-    <p> 
-    <%= image_tag news_feed.picture.url if news_feed.picture %>
-    </p>
+<div class = "container">
+  <div class= "row">
+    <div class= "col-md-offset-1 col-md-10">
+  
+      <% @news_feeds.each do |news_feed| %>
+    
+        <div class = "row">
+        <div class = "col-md-7 news_feed_image" %>
+            <%= image_tag(news_feed.picture.url(:preview)) %>
+        </div>
+          <p class = "col-md-5 text-left" style="white-space: pre-wrap">
+          <span class= "text-primary"><br><%= news_feed.created_at.strftime("%F") %> </span>
+          <br><%= news_feed.content %> <br>
+          
+          </p>
+        </div>
+     
+      <% end %> 
+    </div>
   </div>
 </div>
-
-<% end %>
