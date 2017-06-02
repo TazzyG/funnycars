@@ -15,3 +15,31 @@ Things to do post launch:
 Grey out old events and make an past years events link
 Suggest they add a pdf or info on why sponsoring is awesome(optional)
 Add more to articles, feature button, archive, select_team, select events
+
+Prelaunch Bug list:
+1) Race_Schedule create broken in production
+2) Edit and Delete needed for index and show pages, some are missing (team)
+3) Landing page, logical way to show news_feed without clutter
+4) Standings Model
+5) Old standings, pdf pages (not putting it in the model at this time, don't want to add old races)
+6) Videos, model
+7) Integrate old news_feeds for archived years
+8) Title meta tags
+9) Menus and footers
+10) Design review, usability
+11) Test - rspect
+12) Devise, make sure authenticate_user is in place in controllers
+13) Photos by team
+14) Photos by event
+15) Videos (model)
+16) Views for Archive
+17) May want to run titles to see if typos
+18) Suggestion, CTA for sponsorship and membership, not a lot of info on the site
+19) Clean up readme page
+
+List of dumbass errors and dev notes.
+I know there are lots of duplicate models, articles, news_feed, sponsors... For now, kept separate as workflow is so different for each
+Churned on drop down colors, ended up simply adding a ';' at the end of my css
+
+
+

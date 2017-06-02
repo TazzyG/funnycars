@@ -13,7 +13,7 @@
     <div class="form-group">
       <%= f.hidden_field :user_id %>
     </div>
-     <div class="form-group">
+    <div class="form-group">
       <%= f.date_select :race_start_date, autofocus: true, class: "form-control" %>
     </div>
     <div class="form-group">
@@ -28,11 +28,7 @@
     <div class="form-group">
       <%= f.text_field :race_type, autofocus: true, class: "form-control", placeholder: "example.. 6.75 Index Non Club Event" %>
     </div>
-    <div class = "form-group">
-      
-      <%= f.select(:color, options_for_select([['Bold Blue','#5484ed'], ['Blue','#a4bdfc'], ['Turquoise','#46d6db'],['Bold Green','#51b749'], ['Green','#7ae7bf'], ['Yellow','#fbd75b'],['Orange','#ffb878'], ['Pink','#ff887c'], ['Bold Red','#dc2127'], ['Purple','#dbadff']])) %>
-        
-    </div>
+    
     <div class="btn-group">
       <%= f.submit "Submit race_schedule", class: "btn btn-primary" %>
     </div>
