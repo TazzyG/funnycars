@@ -4,7 +4,6 @@ class SponsorsController < ApplicationController
 
   def index
     @sponsors = Sponsor.all
-    
   end
   
   def show
@@ -37,7 +36,8 @@ class SponsorsController < ApplicationController
   
   def destroy
     @sponsor.destroy
-    redirect_to Sponsors_url
+    flash[:success] = "Sponsor deleted"
+    redirect_to sponsors_path
   end
   
   private

@@ -1,4 +1,18 @@
 // Intro Sections
+.intro {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 100px 0 50px;
+  
+}
+
+.carousel_inner {
+  position: relative;
+ 
+}
+
+
 .brand {
   padding-top: -5%;
   margin-top: -5%;
@@ -17,12 +31,17 @@
 }
 
 .carousel-inner > .item > img {
-   
+    postion: absolute;
     max-width: 500px;
     max-height: 250px;
+    display: block;
+    
   }
   
-
+.announcements {
+  position: absolute;
+  margin: 0 auto;
+}
   
 
 
@@ -32,6 +51,12 @@
 
 
 @media (min-width: 768px) {
+  
+  .intro {
+    padding: 0;
+    height: 100%;
+    min-height: 0;
+  }
     .news_feed_image {
       padding: 1%;
     }

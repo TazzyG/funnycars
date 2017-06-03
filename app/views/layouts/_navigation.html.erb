@@ -9,9 +9,9 @@
   </div>
   <div class="collapse navbar-collapse  navbar-main-collapse">
     <ul class="nav navbar-nav">
-      <a href='#page-top'></a>
+      
       <li class="page-scroll">
-        <%= link_to "Home", root_path(anchor: "page_top")%>      
+        <%= link_to "Home", root_path%>      
       </li>
       
       <li>
@@ -27,7 +27,7 @@
         <%= link_to "Standings", standings_path %>
       </li>
       <li>
-        <%= link_to "PhotoGallery", news_feeds_path %>
+        <%= link_to "Gallery", news_feeds_path %>
       </li>
       <li class= "sign_in">
         <% if user_signed_in? %>
