@@ -1,26 +1,65 @@
 .simple_navbar .navbar-nav {
-  font-family: 'Faster One', cursive;
+  font-family: 'Average Sans', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  
   background: transparent;
   
   
-  .sign_in a {
-    color: $warning;
-  }
+ 
   li > a {
-      color:$primary;
-    
+      color:$light;
+      &:hover,
+        &:focus,
+        &:active {
+            color: $warning;
+            outline: none;
+            background-color: transparent;
+        }
+        &:hover::after,
+        &:focus::after {
+            opacity: 1;
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            transform: translateY(0px);
+        }        
+
   }
+  
+  .nav>li>a:hover,
+  .nav>li>a:focus {
+      background-color: fade($light, 50%);
+  }
+
   
 }
 
 @media (min-width: 768px) {
   
   .simple_navbar .navbar-nav {
-    font-size: 20px;
+    font-size: 16px;
     padding: 20px 0;
-  }
+    
+    .nav {
+            li {
+                a {
+                    color: $light;
+
+                    &:after {
+                        background: $warning;
+                        }
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $warning;
+                    }
+                }
+                
+            }
   
+    }
+  
+  
+}
+ 
 }
