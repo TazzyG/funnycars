@@ -7,7 +7,7 @@ h1 {
   width: 100%;
   height: auto;
   position: relative;
-  padding: 100px 0 50px;
+  padding: 50px 0 50px;
   
 }
 
@@ -16,29 +16,31 @@ h1 {
  
 }
 
-
-.brand {
-  padding-top: -5%;
-  margin-top: -5%;
-  padding-bottom: -10%;
-  margin-bottom: -10%;
-}
-
-.sponsors {
+.sponsors, .teams {
   img {
     max-width: 100%; 
     height: auto;
     display: block;
     margin: 5%;
+  
     
+  }
+}
+
+.teams {
+  img {
+    width: 100%;
+    padding: 5%;
   }
 }
 
 .carousel-inner > .item > img {
     postion: absolute;
-    max-width: 500px;
-    max-height: 250px;
+    max-width: 100%; 
+    height: auto;
     display: block;
+    margin: 5%;
+    
     
   }
   
@@ -47,7 +49,22 @@ h1 {
   margin: 0 auto;
 }
   
+.news_feed_image {
+  max-width: 100%; 
+  height: auto;
+  display: block;
+  padding: 5%;
+    
+}
 
+.news_comments > p {
+  
+  white-space: pre-wrap
+}
+
+.announcement_comments {
+  padding: 0 5%;
+}
 
 
 
@@ -61,8 +78,12 @@ h1 {
     height: 100%;
     min-height: 0;
   }
+  .news_feed {
+    padding-bottom: 3%;
+  }
     .news_feed_image {
       padding: 1%;
+      border-radius: 5%;
     }
     
     .carousel-inner > .item > img {
@@ -71,7 +92,7 @@ h1 {
     }
     
     .carousel-inner > .item > .slider_content {
-      height: 50px;
+      height: 30px;
     }
     
     .navbar .navbar-nav {
@@ -82,6 +103,13 @@ h1 {
 
     .navbar .navbar-collapse {
         text-align: center;
+    }
+    
+    .teams {
+      img {
+        padding: 0;
+        border-radius: 5px;
+      }
     }
 
 }

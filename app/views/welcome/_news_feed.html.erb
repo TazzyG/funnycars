@@ -5,10 +5,10 @@
       <% @news_feeds.each do |news_feed| %>
     
         <div class = "row">
-        <div class = "col-md-7 news_feed_image" %>
+        <div class = "col-md-7 img-responsive center news_feed_image" %>
             <%= image_tag(news_feed.picture.url(:preview)) %>
         </div>
-          <p class = "col-md-5 text-left" style="white-space: pre-wrap">
+          <p class = "col-md-5 text-left news_comments">
           <span class= "text-primary"><br><%= news_feed.created_at.strftime("%F") %> </span>
           <br><%= news_feed.content %> <br>
           

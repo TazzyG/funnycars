@@ -7,14 +7,21 @@
   
 </div>
  
-  <div class="col-sm-10 col-sm-offset-1 col-xs-12 event-content">
-    <% @teams.each do |team| %> 
-    <div class="col-md-4">
-    <%= display_poster_with_link(team) %><br>
-    <div class = "text-center text-info">
-    <%= team.team_name %>
-    </div>
-    </div>
+  <div class="col-md-10 col-md-offset-1 teams">
+    <% @teams.each_slice(3) do |teams| %> 
+      <div class= "row">
+        <% teams.each do |team| %>
+          <div class= "col-md-4">
+            <div img-responsive center>
+              <%= display_poster_with_link(team) %>
+            </div>
+            <div class = "text-center text-info ">
+            <%= team.team_name %>
+            </div> 
+          </div>
+        <% end %> 
+      </div>
     <% end %>
   </div>
 </div>
+   

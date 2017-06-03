@@ -1,9 +1,11 @@
 <div class= "container brand">
-  <a class= "navbar-brand" href= "#page-top" <%= link_to root_path do %>
+ 
     <span class= "logo img-responsive center-block">
-      <%= image_tag "rocky_logo.jpg" %>
+      <%= link_to root_path do %>
+        <%= image_tag "rocky_logo.jpg" %>
+      <% end %>
     </span>
-    <% end %>
-  </a>
+    
+  
 </div>
 

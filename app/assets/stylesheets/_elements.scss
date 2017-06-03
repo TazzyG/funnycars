@@ -38,12 +38,17 @@ img {
 
 section,
 aside {
-    padding: 30% 0;
+    padding: 5% 0;
 }
+
+hr.primary {
+    border-top: 6px solid $primary;
+}
+
 
 @media(min-width:767px) {
     section {
-        padding: 30% 0 2% 0;
+        padding: 20% 0 2% 0;
     }
 }
 

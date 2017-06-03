@@ -11,10 +11,10 @@
             </div>
             <%= image_tag @articles.sample.picture.url(:slider) %>
             <br>
-            <h4 class="text-muted slider_content"> Welcome</h4>
+            
           </div>
           <% @articles.each do |article| %>
-            <div class="item center-block">
+            <div class="item img-responsive center-block">
               <div class= "slider_content">
                 <em><%= article.content %> </em>
               </div>
@@ -23,7 +23,7 @@
               <% end %>
               <%= image_tag article.picture.url(:slider) %> 
               <br>
-              <h4 class="text-muted slider_content"><%= article.title.titleize %></h4>
+              
             </div>
           <% end %>
         </div>
