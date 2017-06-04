@@ -7,6 +7,10 @@ class WelcomeController < ApplicationController
     @news_feeds = NewsFeed.where(:created_at =>Chronic.parse('June 2 at 1pm').. Time.now).order("created_at DESC ")
   end
   
+  def nl2br(s)
+    @s.gsub(/\n/, '<br>')
+  end
+  
   
 
   

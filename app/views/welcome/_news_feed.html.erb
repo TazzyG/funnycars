@@ -8,7 +8,7 @@
         <div class = "col-md-7 img-responsive center news_feed_image" %>
             <%= image_tag(news_feed.picture.url(:preview)) %>
         </div>
-          <p class = "col-md-5 text-left news_comments">
+          <p class = "col-md-5 text-left news_comments" style = "white-space: pre-wrap">
           <span class= "text-primary"><br><%= news_feed.created_at.strftime("%F") %> </span>
           <br><%= news_feed.content %> <br>
           
