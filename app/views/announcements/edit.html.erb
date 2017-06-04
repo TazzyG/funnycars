@@ -1,15 +1,15 @@
-<div class="container text-left" id="edit_article">
+<div class="container text-left" id="edit_announcement">
   <div class = "row">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
         <div class= "panel-heading">
-          <h1>Editing <%= @article.title %></h1>
+          <h1>Editing <%= @announcement.title %></h1>
         </div>
         <div class = "panel-body">
-          <%= render 'form', article: @article  %>
+          <%= render 'form', announcement: @announcement  %>
         </div>
 		    <div class= "panel-footer">
-        <%= link_to 'Cancel', @article %> 
+        <%= link_to 'Cancel', @announcement %> 
         </div>
 		  </div>  
     </div>

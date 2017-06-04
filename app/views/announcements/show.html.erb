@@ -1,0 +1,30 @@
+<div class="container" id:"show_announcement" >
+  <div class="row announcment_comments">
+    <div class= "col-md-10 col-md-offset-1">
+      <div class= "panel panel-default">
+        <div class="panel-heading">
+          <h1><%= @announcement.title %></h1>
+          <h2><%= @announcement.sub_title %></h2>
+          <% if @announcement.sticky == true %> 
+            <h4> Feature Post</h4>
+          <% end %>
+          <p>
+            <%= link_to 'An an Other Announcement', new_announcement_path, class: "btn btn-primary" %>
+          </p>
+        </div>
+        <div class="panel-body">
+         
+            
+          <p style = "white-space: pre-wrap"></strong><%= @announcement.content %></p>
+        </div>
+        <div class="panel-footer">
+          <% if current_user %>
+            <%= link_to 'Edit', edit_announcement_path(@announcement) %> | 
+            <%= link_to 'Delete', @announcement, method: :delete, data: { confirm: "Are you sure?" } %> 
+          <% end %>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

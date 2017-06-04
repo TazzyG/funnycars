@@ -1,0 +1,35 @@
+<%= form_for(@announcement, html: { multipart: true }) do |f| %>
+  <% if @announcement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(announcement.errors.count, "error") %> prohibited this announcement from being saved:</h2>
+
+      <ul>
+      <% announcement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="form-group">
+      <%= f.hidden_field :user_id %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :sub_title, class: "form-control", placeholder: "Sub Title" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :content, class: "form-control", placeholder: "Details" %>
+    </div>
+    <div class="checkbox">
+      <%= f.label :sticky, class: "checkbox inline"  do %>
+      <%= f.check_box :sticky %>
+      <span class= "text-muted" >Move this announcement to the top</span>
+      <% end %>
+    </div>
+    
+    <div class="btn-group">
+      <%= f.submit "Submit announcement", class: "btn btn-primary" %>
+    </div>
+<% end %>

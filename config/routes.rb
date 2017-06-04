@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   
   resources :sponsors
   resources :standings
+  resources :announcements
   
   resources :topics
  
