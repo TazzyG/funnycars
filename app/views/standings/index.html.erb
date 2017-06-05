@@ -31,6 +31,9 @@
           </td>
           <td>
            <%= event_team.team.team_name %> 
+           <% if current_user %>
+           <%= link_to "Delete", [event_team.race_schedule, event_team], method: :delete, data: { confirm: 'Are you sure?' } %>
+           <% end %>
           </td>
           <td>
            <%= event_team.team.team_points %>

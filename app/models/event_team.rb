@@ -2,7 +2,7 @@ class EventTeam < ApplicationRecord
   belongs_to :race_schedule
   belongs_to :team
   
-  validates :team_id, presence: true
+  validates :team_id, presence: true, uniqueness: {scope: "race_schedule"}
   validates :race_schedule_id, presence: true
   validates :race_result, presence: true
   

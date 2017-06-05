@@ -25,14 +25,6 @@ class EventTeamsController < ApplicationController
     redirect_to race_schedule_path(@race_schedule), notice: "Result successfully Added"
   end
   
-  def edit
-  end
-  
-  def update
-    if @event_team.update(event_team_params)
-      redirect_to race_schedule_path(@event_team)
-    end
-  end
   
   def destroy 
     
