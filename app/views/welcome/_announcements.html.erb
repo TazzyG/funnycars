@@ -12,8 +12,9 @@
                 data: {confirm: "Are you sure?"} %>
             <% end %>
             </h2>
-            
-            
+            <div class= "img-responsive center news_feed_image">
+              <%= announcement.youtube %>
+            </div>
             <p> 
              <%= simple_format(announcement.content) %>
             </p>
@@ -35,7 +36,9 @@
                 data: {confirm: "Are you sure?"} %>
             <% end %>
             </h2>
-            
+             <div class= "img-responsive center news_feed_image">
+              <%= announcement.youtube %>
+            </div>
             <p> 
               <%= simple_format(announcement.content) %>
             </p>
