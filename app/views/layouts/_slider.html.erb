@@ -5,10 +5,13 @@
     <div class="col-md-7 col-md-offset-1">
       <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="item active center-block">
+          <div class="item active img-responsive center-block">
             <div class= "slider_content">
               <em>Welcome to the <%= Time.current.year %> season! Things are heating up. We hope to see you at the events!</em>
             </div>
+            <% if current_user %> 
+                 Can't Edit this one
+              <% end %>
             <%= image_tag @articles.sample.picture.url(:slider) %>
             <br>
             

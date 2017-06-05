@@ -3,7 +3,7 @@ class Team < ApplicationRecord
   has_many :team_infos, dependent: :destroy
   has_many :team_pictures, dependent: :destroy
   has_many :race_schedules, through: :event_teams
-  has_many :event_teams, dependent: :destroy
+  has_many :event_teams
   
   mount_uploader :picture, PictureUploader
   

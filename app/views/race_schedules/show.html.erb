@@ -2,14 +2,13 @@
   <div class= "row">
     <div class= "col-md-offset-1 col-md-10">
     <p>
-      
         <%= @race_schedule.race_start_date.strftime("%F")%>
         <%= @race_schedule.race_end_date.strftime("%F")%>
         <%= @race_schedule.location %>
         <%= @race_schedule.details %>
         <%= @race_schedule.race_type %>. 
     </p>
-    <h3>Add a Team to the Event</h3>
+    <h3>Race Result</h3>
     <%= render @race_schedule.event_teams %> 
     <%= render "event_teams/form"%> 
     </div>

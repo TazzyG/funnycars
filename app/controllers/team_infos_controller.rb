@@ -37,12 +37,12 @@ before_action :set_team
   
    def update
     respond_to do |format|
-      if @product.update(team_info_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { render :show, status: :ok, location: @product }
+      if @team_info.update(team_info_params)
+        format.html { redirect_to @team_info, notice: 'Team_info was successfully updated.' }
+        format.json { render :show, status: :ok, location: @team_info }
       else
         format.html { render :edit }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.json { render json: @team_info.errors, status: :unprocessable_entity }
       end
     end
    end
@@ -61,7 +61,7 @@ before_action :set_team
   
   private
     def set_team_info
-      @team_info = Team_info.find(params[:id])
+      @team_info = TeamInfo.find(params[:id])
     end
     
     def set_team

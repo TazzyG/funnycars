@@ -12,7 +12,4 @@ class WelcomeController < ApplicationController
     @s.gsub(/\n/, '<br>')
   end
   
-  
-
-  
 end
