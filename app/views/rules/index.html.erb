@@ -13,7 +13,7 @@
       <% @rules.each do |rule| %>
         <p class= "text-primary">
           
-            <%= rule.number %> <% if rule.number %>. <% end %> <%= rule.title.titleize  %>
+           <%= rule.number %> <%= rule.title.titleize  %>
           
         </p>
         <p> <%= rule.description %>
