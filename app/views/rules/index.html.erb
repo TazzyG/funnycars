@@ -12,25 +12,26 @@
       <hr>
       <% @rules.each do |rule| %>
         <p class= "text-primary">
-          <% unless rule_number == nil %>
-            <%= rule.number %>. <%= rule.title.titleize %>
-          <% end %>
+          
+            <%= rule.number %> <% if rule.number %>. <% end %> <%= rule.title.titleize  %>
+          
         </p>
         <p> <%= rule.description %>
-        <% if rule.picture? %>
+        
         <br>
         <span class= "logo img-responsive center-block">
         <%= image_tag rule.picture.url(:slider) if rule.picture? %>
         </span>
           <% if current_user %>
-          <p>
+            <div>
           <%= link_to "Show Rule", rule %> | 
           <%= link_to "Edit this rule", edit_rule_path(rule) %> |
           <%= link_to "Delete thi rule", rule, method: :delete, 
             data: {confirm: "Are you sure?" } %>
-            <% end %>
-          </p>
-        <% end %>
+            
+          </div>
+          <% end %>
+        
         </p>
 	    <% end %>	   
     </div>
