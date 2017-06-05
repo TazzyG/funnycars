@@ -17,19 +17,19 @@
     <%= image_tag @team.picture.url(:slider) %>
     </div>
     <p>
-      <% if @team.facebook %> 
+      <% if @team.facebook? %> 
         <%= link_to @team.facebook do %>
           <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
         <% end %>
       <% end %> 
-      <% if @team.youtube %> 
+      <% if @team.youtube? %> 
         <%= link_to @team.youtube do %>
           <i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i>
         <% end %>
       <% end %> 
-      <% if @team.instagram %> 
-        <%= link_to @team.facebook do %>
-          <i class="fa fa-youtube-instagram fa-3x" aria-hidden="true"></i>
+      <% if @team.instagram? %> 
+        <%= link_to @team.instagram do %>
+          <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
         <% end %>
       <% end %> 
     </p>
