@@ -37,6 +37,7 @@ class EventTeamsController < ApplicationController
   def destroy 
     
     @event_team.destroy
+    @event_team.team.team_points -= @event_team.race_result
     redirect_to race_schedule_path(@race_schedule), notice: "Team successfully Removed"
   end
   
