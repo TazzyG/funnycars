@@ -18,18 +18,27 @@ class EventTeamsController < ApplicationController
     @event_team.save 
     # @team = @event_team.team_id
     # @race_schedule = @event_team.race_schedule_id
-    @event_team.team.team_points += @event_team.race_result
-    @event_team.team.save 
-    
-    
+    add_team_points(@event_team.team_id)
     redirect_to race_schedule_path(@race_schedule), notice: "Result successfully Added"
+  end
+  
+  def add_team_points(team)
+    @team = Team.find(team)
+    @team.team_points += @event_team.race_result
+    @team.save
+  end
+  
+  def remove_team_points(team)
+    @team = Team.find(team)
+    @team.team_points -= @event_team.race_result
+    @team.save
   end
   
   
   def destroy 
     
     @event_team.destroy
-    @event_team.team.team_points -= @event_team.race_result
+    remove_team_points(@event_team.team_id)
     redirect_to race_schedule_path(@race_schedule), notice: "Team successfully Removed"
   end
   
@@ -44,6 +53,6 @@ class EventTeamsController < ApplicationController
     end
     
     def event_team_params
-      params.require(:event_team).permit(:race_schedule_id, :team_id, :race_result)
+      params.require(:event_team).permit(:race_schedule_id, :team_id, :race_result, :team)
     end
 end
