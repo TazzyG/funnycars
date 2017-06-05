@@ -47,10 +47,11 @@
       <% @sponsors.each do |sponsor| %>
       <div>
         
-        <%= link_to "#{sponsor.web_site}", target: '_blank' do %>
+        <%= link_to sponsor.web_site, target: '_blank' do %>
           <span class= "logo img-responsive center-block">
-            <% end %>
+           
             <%= image_tag sponsor.picture.url %>
+             <% end %>
             <% if current_user %>
             <%= link_to "View or Edit", sponsor %>
           </span>
