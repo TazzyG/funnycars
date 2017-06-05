@@ -1,14 +1,21 @@
 
     <% @announcements.each do |announcement| %> 
       <div class = "row text-left announcement_comments">
-        <div class= "col-md-offset-2 col-md-8">
+        <div class= "col-md-10">
        
           <% if announcement.sticky? %>
             <h1> <%= announcement.title %></h1>
-            <h2 class= "text-primary"><%= announcement.sub_title %></h2>
+            <h2 class= "text-primary"><%= announcement.sub_title %>
+            <% if current_user %>
+              <%= link_to "Edit", announcement_path(announcement) %> |
+              <%= link_to "Delete", announcement, method: :delete,
+                data: {confirm: "Are you sure?"} %>
+            <% end %>
+            </h2>
             
-            <p style = "white-space: pre-wrap"> 
-              <%= announcement.content %>
+            
+            <p> 
+             <%= simple_format(announcement.content) %>
             </p>
             <hr class = "primary">
           <% end %>
@@ -18,13 +25,19 @@
     
     <% @announcements.each do |announcement| %> 
       <div class = "row text-left announcement_comments">
-        <div class= "col-md-offset-2 col-md-8">
+        <div class= "col-md-10">
           <% if announcement.sticky == false %>
             <h1> <%= announcement.title %></h1>
-            <h2 class= "text-primary"><%= announcement.sub_title %></h2>
+            <h2 class= "text-primary"><%= announcement.sub_title %>
+            <% if current_user %>
+              <%= link_to "Edit", announcement_path(announcement) %> |
+              <%= link_to "Delete", announcement, method: :delete,
+                data: {confirm: "Are you sure?"} %>
+            <% end %>
+            </h2>
             
             <p> 
-              <%= announcement.content %>
+              <%= simple_format(announcement.content) %>
             </p>
             <hr class = "primary">
           <% end %>

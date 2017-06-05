@@ -30,8 +30,8 @@
         <tbody>
          
         <tr>
-          <td><%= race_schedule.race_start_date.strftime("%F") %> - 
-          <%= race_schedule.race_end_date.strftime("%F") %>
+          <td><%= race_schedule.race_start_date.strftime("%B%d") %> - 
+          <%= race_schedule.race_end_date.strftime("%B%d") %>
           </td>
           <td><%= link_to race_schedule.location, race_schedule %>
           </td>

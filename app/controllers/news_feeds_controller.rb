@@ -13,8 +13,8 @@ class NewsFeedsController < ApplicationController
     @news_feed = current_user.news_feeds.build
   end
   
-  def nl2br(s)
-    @s.gsub(/\n/, '<br>')
+  def nl2br(str)
+    @str.gsub(/\n/, '<br>')
   end
   
   
