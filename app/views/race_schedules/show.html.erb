@@ -1,3 +1,4 @@
+<% provide(:title, @race_schedule.details) %>
 <div class= "containter text-left">
   <div class= "row">
     <div class= "col-md-offset-1 col-md-10">
@@ -18,9 +19,9 @@
       </div>
     </div>
   </div>
-  <div class = "text-center">
+  <div class = "container text-center">
    <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
-   <%= link_to "Edit Event", edit_race_schedule_path(@race_schedule), class: "btn btn-info" %>
+   <%= link_to "Edit Event", edit_race_schedule_path(@race_schedule), class: "btn btn-info" %> 
    <%= link_to "Delete #{@race_schedule.details}", @race_schedule, method: :delete, 
      data: {confirm: "Are you sure?" }, class: 'btn btn-warning' %>
   </div>
