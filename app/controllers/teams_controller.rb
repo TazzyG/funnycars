@@ -3,13 +3,13 @@ class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   def index
-    @teams = Team.all
+    @teams = Team.all.includes[:event_teams]
     @articles = Article.all
   end
   
   def show
   end
-
+  
   def new
     @team = current_user.teams.build
   end
@@ -17,6 +17,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     @team.user_id = current_user.id
+    @team.team_points = 0
     if @team.save
       redirect_to @team, notice: 'Team was successfully created'
     else
@@ -46,6 +47,6 @@ class TeamsController < ApplicationController
    @team = Team.find(params[:id])   
   end
   def team_params
-    params.require(:team).permit(:team_name, :driver, :home_town, :crew_chief, :crew, :car, :car_name, :engine, :chassis, :picture, :facebook, :youtube, :instagram, :user_id)
+    params.require(:team).permit(:team_name, :driver, :home_town, :crew_chief, :crew, :car, :car_name, :engine, :chassis, :picture, :facebook, :youtube, :instagram, :user_id, :team_points, event_teams_attributes: [:race_result])
   end
 end

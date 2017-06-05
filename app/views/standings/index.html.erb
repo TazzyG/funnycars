@@ -1,5 +1,48 @@
-<div class= "text-center">
-  <h1>Coming Soon</h1>
-  <h4>We will post event standings following upcoming events</h4>
-  <p class="text-primary">Have a great summer. See you at the events</p>
-</div>  
+<div class= "container">
+  
+  <h1> 2017 Standings</h1>
+  
+  <table class= "table table-responsive">
+    <thead>
+      <tr>
+        <th class= "col-sm-2"> POSITION</th>
+        <th class= "col-sm-3"> TEAM</th>
+        <th class= "col-sm-2">POINTS</th>
+        <th class= "col-sm-2">NET</th>
+        <th class= "col-sm-4">CAR</th>
+      </tr>
+    </thead>
+  </table>
+  <% @event_teams.each_with_index do |event_team, index| %>
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th class= "col-sm-2"> </th>
+          <th class= "col-sm-3"> </th>
+          <th class= "col-sm-2"> </th>
+          <th class= "col-sm-2"> </th>
+          <th class= "col-sm-4"> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+           <%= index+1 %>
+          </td>
+          <td>
+           <%= event_team.team.team_name %> 
+          </td>
+          <td>
+           <%= event_team.team.team_points %>
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <% end %>
+</div>

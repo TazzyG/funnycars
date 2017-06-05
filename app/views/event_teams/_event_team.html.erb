@@ -6,9 +6,11 @@
   <% else %>
     <span class= "text-primary"><strong> -- Result: </strong><%= event_team.race_result %> </span>
   <% end %>
-  <%= link_to "Edit Result", edit_event_team_path(event_team.race_schedule) %> |
-  <%= link_to "Remove Team or Result", [event_team.race_schedule, event_team],
-        method: :delete, 
-        data: {confirm: 'Are you sure?' } %>
-  
+  <% if current_user %>
+    <%= link_to "Edit Result", edit_event_team_path(event_team.race_schedule) %> |
+    <%= link_to "Remove Team or Result", [event_team.race_schedule, event_team],
+          method: :delete, 
+          data: {confirm: 'Are you sure?' } %>
+  <% end %>
+    
 </p>
