@@ -46,7 +46,8 @@
     <div class="col-md-3 col-md-offset-1-right sponsors">
       <% @sponsors.each do |sponsor| %>
       <div>
-        <%= link_to sponsor.web_site, target: '_blank' do %>
+        
+        <%= link_to "#{sponsor.web_site}", target: '_blank' do %>
           <span class= "logo img-responsive center-block">
             <% end %>
             <%= image_tag sponsor.picture.url %>
