@@ -4,6 +4,7 @@
     <div class= "col-md-10 col-md-offset-1">
       <% @announcements.each do |announcement| %>
         <h1><%= link_to announcement.title, announcement %></h1>
+        
         <h2><%= announcement.sub_title %></h2>
         <% if announcement.sticky == true %> 
           <h4> Feature Post</h4>
@@ -14,6 +15,5 @@
       <% end %>
       </div>
     </div>
-  </div>
 </div>
 
