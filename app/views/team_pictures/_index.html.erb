@@ -1,0 +1,15 @@
+<% @team.team_pictures.each_slice(3) do |team_pictures| %>
+  <div class= "row">
+    <% team_pictures.each do |team_picture| %>
+      <div class= "col-xs-4 img-responsive center">
+    <%= image_tag team_picture.picture_url(:medium) unless team_picture.picture.blank? %>
+     <br>
+     <%= link_to [team_picture.team, team_picture], method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <span class="glyphicon glyphicon-trash"></span>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+<% end %>  
+  
+  

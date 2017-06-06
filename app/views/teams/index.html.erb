@@ -1,18 +1,17 @@
 <% provide(:title, "Teams") %>
-<div class = "row">
+<div class = "container">
   <div class= "text-center">
   <% if current_user %>
     <%= link_to "add a new team", new_team_path, class: 'btn btn-primary' %>
   <% end %>
-  
-</div>
+  </div>
  
   <div class="col-md-10 col-md-offset-1 teams">
     <% @teams.each_slice(3) do |teams| %> 
       <div class= "row">
         <% teams.each do |team| %>
-          <div class= "col-md-4">
-            <div img-responsive center>
+          <div class= "col-xs-4">
+            <div class= "img-responsive center">
               <%= display_poster_with_link(team) %>
             </div>
             <div class = "text-center text-info ">
