@@ -12,9 +12,11 @@
                 data: {confirm: "Are you sure?"} %>
             <% end %>
             </h2>
-            <div class="youtube">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <% if announcement.youtube? %> 
+              <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
+              </div>
+            <% end %>
             <p> 
              <%= simple_format(announcement.content) %>
             </p>

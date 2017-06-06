@@ -11,12 +11,11 @@
           <% if @announcement.sticky == true %> 
             <h4> Feature Post</h4>
           <% end %>
-          
+          <% if @announcement.youtube? %> 
             <div class="youtube">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=@announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
-              
             </div>
-         
+          <% end %>
           <p>
             <%= link_to 'An an Other Announcement', new_announcement_path, class: "btn btn-primary" %>
           </p>
