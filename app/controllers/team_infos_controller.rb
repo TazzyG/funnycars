@@ -32,28 +32,11 @@ before_action :set_team
   def show
   end
   
-  def edit
-  end
-  
-   def update
-    respond_to do |format|
-      if @team_info.update(team_info_params)
-        format.html { redirect_to @team_info, notice: 'Team_info was successfully updated.' }
-        format.json { render :show, status: :ok, location: @team_info }
-      else
-        format.html { render :edit }
-        format.json { render json: @team_info.errors, status: :unprocessable_entity }
-      end
-    end
-   end
-
-
-  
   def destroy
     @team_info = @team.team_infos.find(params[:id])
     @team_info.destroy
     respond_to do |format|
-      format.html { redirect_to team_team(@team), notice: 'Team_info was successfully destroyed.' }
+      format.html {redirect_to @team, notice: 'Team_info was successfully destroyed.' }
       format.json { head :no_content }
     end
     

@@ -16,4 +16,5 @@ class ApplicationController < ActionController::Base
       user_params.permit( :password, :password_confirmation)
     end
   end
+  
 end

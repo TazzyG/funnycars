@@ -25,8 +25,8 @@
           <% if current_user %>
             <div>
           <%= link_to "Show Rule", rule %> | 
-          <%= link_to "Edit this rule", edit_rule_path(rule) %> |
-          <%= link_to "Delete thi rule", rule, method: :delete, 
+          <%= link_to "Edit Rule", edit_rule_path(rule) %> |
+          <%= link_to "Delete Rule", rule, method: :delete, 
             data: {confirm: "Are you sure?" } %>
             
           </div>

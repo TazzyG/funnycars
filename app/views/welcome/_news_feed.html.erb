@@ -11,6 +11,11 @@
           <p class = "col-md-5 text-left news_comments" style = "white-space: pre-wrap">
           <span class= "text-primary"><br><%= news_feed.created_at.strftime("%F") %> </span>
           <br><%= news_feed.content %> <br>
+          <br> 
+          <% if current_user %>
+            <%= link_to 'Edit This Post', edit_news_feed_path(news_feed) %> 
+            <%= link_to 'Delete This Post', news_feed, method: :delete, data: { confirm: "Are you sure?" } %>  
+          <% end %>
           
           </p>
         </div>

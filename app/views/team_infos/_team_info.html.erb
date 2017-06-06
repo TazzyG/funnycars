@@ -1,0 +1,22 @@
+<% if team_info.topic_id == nil %>
+<div class = "text-muted">
+  <i class= "fa fa-car fa-2x"></i><i class= "fa fa-car fa-2x"></i><i class= "fa fa-car fa-2x"></i>
+  <i class= "fa fa-car fa-2x"></i><i class= "fa fa-car fa-2x"></i><i class= "fa fa-car fa-2x"></i>
+  <i class= "fa fa-car fa-2x"></i><i class= "fa fa-car fa-2x"></i><i class= "fa fa-car fa-2x"></i>
+  <i class= "fa fa-car fa-2x"></i>
+  
+</div>
+<% else %>
+  <p>
+    <span class="text-primary"><%=team_info.topic_name %>  </span>
+    <%= team_info.body %>
+    
+    <% if current_user %>
+      <%= link_to [team_info.team, team_info], method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <span class="glyphicon glyphicon-trash"></span>
+      <% end %>
+    <% end %>
+  </p>
+<% end %>
+
+        

@@ -16,7 +16,7 @@
               <%= display_poster_with_link(team) %>
             </div>
             <div class = "text-center text-info ">
-            <%= team.team_name %>
+            <%= team.team_name.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>
             </div> 
           </div>
         <% end %> 
