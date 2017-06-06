@@ -29,7 +29,7 @@ Prelaunch Bug list:
 8) Title meta tags
 9) Menus and footers
 10) Design review, usability
-11) Test - rspect
+11) Test - rspec
 12) Devise, make sure authenticate_user is in place in controllers
 13) Photos by team
 14) Photos by event
