@@ -1,3 +1,6 @@
+
+
+
 .footer {
   .upper {
     padding: 50px 0;
@@ -6,6 +9,11 @@
     opacity: 0.5;
     p {
       color: fade($light);
+      a { color: $info;
+        &:hover {
+          color: $primary;
+        }
+      }
     }
     h2 {
       padding-bottom: 10px;
@@ -14,7 +22,7 @@
     .footer-links {
       li { 
         padding-bottom: 10px;
-        a { color: $light;
+        a { color: $info;
         &:hover {
           color: $primary;
         }
