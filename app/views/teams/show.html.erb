@@ -12,7 +12,9 @@
 <div class= "row text-center container">
   <div class= "col-md-12">
  
-    <h1> <%= @team.team_name.titleize %></h1>
+    <h2> 
+    <%= @team.team_name.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>
+    </h2>
     <div class= "logo img-responsive center-block">
     <%= image_tag @team.picture.url(:slider) %>
     </div>
