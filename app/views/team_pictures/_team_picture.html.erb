@@ -1,12 +1,10 @@
-<% @team.team_pictures.each do |team_picture| %>
+
 <div class= "col-md-4 logo img-responsive center-block">
-<%= image_tag team_picture.picture.url(:medium)%>
+<%= image_tag team_picture.picture_url(:medium) unless team_picture.picture.blank? %>
  <br>
  <%= link_to [team_picture.team, team_picture], method: :delete, data: { confirm: 'Are you sure?' } do %>
   <span class="glyphicon glyphicon-trash"></span>
-       
   <% end %>
-<% end %>
 </div>  
   
   
