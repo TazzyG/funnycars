@@ -4,7 +4,7 @@ The site user/content creator had an unmaintained website and was tasked with ma
 After attempting to use FTP to access and change a large index html file, he was faced with 
 many problems.
 
-I made him a small **ruby on rails website** that would allow him to upload pictures to a picture galler, 
+I made him a small **ruby on rails website** that would allow him to upload pictures to a picture gallery, 
 show sponsor logos, and make announcments. 
 [rockymountainfloppers](rockymountainfloppers.com)
 

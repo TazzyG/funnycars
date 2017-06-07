@@ -47,6 +47,7 @@ gem 'fog-aws', group: :production
 gem 'carrierwave', '~> 1.0'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'chronic'
+gem 'awesome_print', '~> 1.7'
 
 
 
