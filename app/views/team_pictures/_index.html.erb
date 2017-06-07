@@ -4,9 +4,8 @@
       <div class= "col-xs-3 img-responsive center">
     <%= image_tag team_picture.picture_url(:small) unless team_picture.picture.blank? %>
      <br>
-     <%= link_to [team_picture.team, team_picture], method: :delete, data: { confirm: 'Are you sure?' } do %>
-      <span class="glyphicon glyphicon-trash"></span>
-      <% end %>
+     <%= link_to "Delete Team Picture", [team_picture.team, team_picture], method: :delete, data: { confirm: 'Are you sure?' } unless team_picture.picture.blank? %>
+      
     </div>
     <% end %>
   </div>

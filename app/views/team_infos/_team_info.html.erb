@@ -12,9 +12,8 @@
     <%= team_info.body %>
     
     <% if current_user %>
-      <%= link_to [team_info.team, team_info], method: :delete, data: { confirm: 'Are you sure?' } do %>
-      <span class="glyphicon glyphicon-trash"></span>
-      <% end %>
+      <%= link_to "Delete Funny Fact", [team_info.team, team_info], method: :delete, data: { confirm: 'Are you sure?' } %>
+      
     <% end %>
   </p>
 <% end %>

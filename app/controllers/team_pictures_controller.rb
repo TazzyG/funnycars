@@ -1,7 +1,7 @@
 class TeamPicturesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_team_picture, only: [:show, :destroy]
-  before_action :set_team, only: [:show, :destroy]
+  before_action :set_team
   
   def create
     @team_picture = @team.team_pictures.create(team_picture_params)
