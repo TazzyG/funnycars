@@ -1,8 +1,8 @@
-<% @team.team_pictures.each_slice(4) do |team_pictures| %>
+<% @team.team_pictures.each_slice(2) do |team_pictures| %>
   <div class= "row">
     <% team_pictures.each do |team_picture| %>
-      <div class= "col-xs-3 img-responsive center">
-    <%= image_tag team_picture.picture_url(:small) unless team_picture.picture.blank? %>
+      <div class= "col-md-6 img-responsive center">
+    <%= image_tag team_picture.picture_url unless team_picture.picture.blank? %>
      <br>
      <%= link_to "Delete Team Picture", [team_picture.team, team_picture], method: :delete, data: { confirm: 'Are you sure?' } unless team_picture.picture.blank? %>
       
