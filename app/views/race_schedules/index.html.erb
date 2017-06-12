@@ -19,6 +19,7 @@
     </table>
     
       <% @race_schedules.each do |race_schedule| %>
+       
         <table class= "table table-responsive">
         <thead>
           <tr>
@@ -29,7 +30,7 @@
           </tr>
         </thead>
         <tbody>
-        <tr class= <%= race_schedule.color%>>
+        <tr>
           <td><%= race_schedule.race_start_date.strftime("%b %d") %>
           <% unless race_schedule.race_start_date == race_schedule.race_end_date %>
             - 

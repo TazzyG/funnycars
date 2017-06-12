@@ -4,17 +4,13 @@ class RaceSchedulesController < ApplicationController
   before_action :set_race_schedule, only: [:show, :edit, :update, :destroy]
   
   def index
+    
     @race_schedules = RaceSchedule.all
     @articles = Article.all
   end
   
   def show
-    if @race_schedule.race_start_date < Date.today
-      @race_schedule.color = "text-muted"
-    else
-      @race_schedule.color = "text-info"
-    end
-      
+  
   end
   
   def new
@@ -53,7 +49,12 @@ class RaceSchedulesController < ApplicationController
   
   
   def set_race_schedule
-   @race_schedule = RaceSchedule.find(params[:id])   
+   @race_schedule = RaceSchedule.find(params[:id])  
+   if @race_schedule.race_start_date < Date.today
+      @race_schedule.color = "text-muted"
+    else
+      @race_schedule.color = "text-info"
+    end
   end
   def race_schedule_params
     params.require(:race_schedule).permit(:dates, :location, :details, :race_type, :race_start_date, :race_end_date, :color)
