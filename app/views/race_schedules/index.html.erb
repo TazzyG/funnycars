@@ -19,7 +19,13 @@
     </table>
     
       <% @race_schedules.each do |race_schedule| %>
-      <table class= "table table-responsive">
+       <% if race_schedule.race_end_date < Date.today
+          race_schedule.color = "text-muted"
+        else
+          race_schedule.color = "text-info"
+        end %>
+       
+        <table class= "table table-responsive">
         <thead>
           <tr>
             <th class= "col-md-3"></th>
@@ -29,10 +35,13 @@
           </tr>
         </thead>
         <tbody>
-         
-        <tr>
-          <td><%= race_schedule.race_start_date.strftime("%B%d") %> - 
-          <%= race_schedule.race_end_date.strftime("%B%d") %>
+        <tr class= <%= race_schedule.color%>>
+          <td><%= race_schedule.race_start_date.strftime("%b %d") %> - 
+          <% if race_schedule.race_start_date.month == race_schedule.race_end_date.month %>
+            <%= race_schedule.race_end_date.strftime("%d") %>
+          <% else %>
+            <%= race_schedule.race_end_date.strftime("%b %d") %>
+          <% end %>
           </td>
           <td><%= link_to race_schedule.location, race_schedule %>
           </td>

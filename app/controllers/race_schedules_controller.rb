@@ -1,15 +1,22 @@
 class RaceSchedulesController < ApplicationController
+  require 'date'
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_race_schedule, only: [:show, :edit, :update, :destroy]
-
+  
   def index
     @race_schedules = RaceSchedule.all
     @articles = Article.all
   end
   
   def show
+    if @race_schedule.race_end_date < Date.today
+      @race_schedule.color = "text-muted"
+    else
+      @race_schedule.color = "text-info"
+    end
+      
   end
-
+  
   def new
     @race_schedule = current_user.race_schedules.build
   end
@@ -35,12 +42,15 @@ class RaceSchedulesController < ApplicationController
     end
   end
   
+  
+  
   def destroy
     @race_schedule.destroy
     redirect_to race_schedules_url
   end
   
   private
+  
   
   def set_race_schedule
    @race_schedule = RaceSchedule.find(params[:id])   

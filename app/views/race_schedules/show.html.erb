@@ -1,13 +1,14 @@
 <% provide(:title, @race_schedule.details) %>
 <div class= "containter text-left">
-  <div class= "row">
+  <div class= "row <%= @race_schedule.color%>">
     <div class= "col-md-offset-1 col-md-10">
     <p>
         <%= @race_schedule.race_start_date.strftime("%B%d")%> -
         <%= @race_schedule.race_end_date.strftime("%B%d")%> |
         <%= @race_schedule.location %> |
         <%= @race_schedule.details %> |
-        <%= @race_schedule.race_type %> 
+        <%= @race_schedule.race_type %>  --- TEST
+        <%= @race_schedule.color %>
     </p>
     <h2 class= "text-primary">Result For <%= @race_schedule.details %></h2>
     <div class = "row">
