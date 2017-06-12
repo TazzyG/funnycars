@@ -37,30 +37,36 @@
     </p>
   </div>
 </div>
-<div class = "row container">
-  <div class= "col-md-offset-1 col-md-3">
-    <h2> Team </h2>
-     <h4><span class= "text-primary">Team Name</span> <%= @team.team_name %> </h4>
-     <h4><span class= "text-primary">Driver </span> <%= @team.driver %></h4>
-     <p><span class= "text-primary">Home Town </span> <%= @team.home_town %></p>
-     <p><span class= "text-primary">Crew Chief</span> <%= @team.crew_chief %></p>
-     <p><span class= "text-primary">Crew</span> <%= @team.crew %></p>
-  </div>   
-  <div class= "col-md-4">
-   <h2> Car Details</h2>
-     <h3><span class="text-primary"> Name</span><%= @team.car_name %> </h3>
-     <p><span class= "text-primary"> Car</span> <%= @team.car %></p>
-     <p><span class= "text-primary"> Engine</span> <%= @team.engine %></p>
-     <p><span class= "text-primary"> Chassis</span> <%= @team.chassis %></p>
-  </div>   
-  <div class= "col-md-4 col-md-offset-right-1">
-   <h2> Events This Year</h2>
-     <%@team.event_teams.each do |event_team| %>
-     <%= link_to event_team.race_schedule.details, race_schedule_path(event_team.race_schedule) %>
-      - <%= event_team.race_schedule.race_start_date.strftime("%B%d") %> - 
-     <%= event_team.race_schedule.race_end_date.strftime("%B%d") %>
-     <% end %> 
-  </div> 
+<div class = "row">
+  <div class= "col-md-10 col-md-offset-1">
+    <div class= "row container">
+      <div class= "col-md-4">
+        <h2> Team </h2>
+         <h4><span class= "text-primary">Team Name</span> <%= @team.team_name %> </h4>
+         <h4><span class= "text-primary">Driver </span> <%= @team.driver %></h4>
+         <p><span class= "text-primary">Home Town </span> <%= @team.home_town %></p>
+         <p><span class= "text-primary">Crew Chief</span> <%= @team.crew_chief %></p>
+         <p><span class= "text-primary">Crew</span> <%= @team.crew %></p>
+      </div>   
+      <div class= "col-md-4">
+       <h2> Car Details</h2>
+         <h3><span class="text-primary"> Name</span><%= @team.car_name %> </h3>
+         <p><span class= "text-primary"> Car</span> <%= @team.car %></p>
+         <p><span class= "text-primary"> Engine</span> <%= @team.engine %></p>
+         <p><span class= "text-primary"> Chassis</span> <%= @team.chassis %></p>
+      </div>   
+      <div class= "col-md-4">
+       <h2> Events This Year</h2>
+         <%@team.event_teams.each do |event_team| %>
+         <%= link_to event_team.race_schedule.details, race_schedule_path(event_team.race_schedule) %>
+          - <%= event_team.race_schedule.race_start_date.strftime("%B%d") %> - 
+         <%= event_team.race_schedule.race_end_date.strftime("%B%d") %>
+         - <%= event_team.race_result %> points
+         <br>
+         <% end %> 
+      </div>
+    </div>
+  </div>
 </div>
 <div class= "row">
   <div class= "col-md-offset-1 col-md-10">

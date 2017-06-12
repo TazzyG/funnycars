@@ -10,7 +10,7 @@
           :team_name) %>
   </div>
   <div class= "form-group">
-    <%= f.number_field :race_result, placeholder: "race result" %>
+    <%= f.number_field  :race_result, value: nil, min: 0, max: 130,  placeholder: " Pts " %>
   </div>
   <div class="actions btn-group">
     <%= f.submit "Submit", class: "btn" %>
