@@ -9,7 +9,7 @@ class RaceSchedulesController < ApplicationController
   end
   
   def show
-    if @race_schedule.race_end_date < Date.today
+    if @race_schedule.race_start_date < Date.today
       @race_schedule.color = "text-muted"
     else
       @race_schedule.color = "text-info"
