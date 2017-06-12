@@ -19,13 +19,6 @@
     </table>
     
       <% @race_schedules.each do |race_schedule| %>
-        <% if race_schedule.race_start_date < Date.today 
-          race_schedule.color = "text-muted"
-         else
-          race_schedule.color = "text-info"
-         end %>
-       
-       
         <table class= "table table-responsive">
         <thead>
           <tr>
