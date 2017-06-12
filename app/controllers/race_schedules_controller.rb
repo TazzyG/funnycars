@@ -2,7 +2,7 @@ class RaceSchedulesController < ApplicationController
   require 'date'
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_race_schedule, only: [:show, :edit, :update, :destroy]
-  before_action :set_color, only: [:show]
+  
   def index
     @race_schedules = RaceSchedule.all
     @articles = Article.all
