@@ -8,6 +8,14 @@ class NewsFeed < ApplicationRecord
   validates :picture, presence: true
   validates :content, presence: true, length: { maximum: 4500 }
   
+  def team 
+    @team = Team.find(team_id)
+  end
+  
+  def race_schedule
+    @race_schedule = RaceSchedule.find(race_schedule_id)
+  end
+  
   validate  :picture_size
   private
 

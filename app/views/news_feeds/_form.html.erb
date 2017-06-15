@@ -31,11 +31,15 @@
           :id,
           :team_name, include_blank:true) %>
     </div>
-   
-    <div class="form-group">
-      <%= f.date_select :date_of_post, autofocus: true, class: "form-control" %>
-    </div>
     
+    <div class= "form_tag">
+    <%= f.label :Event %> <br>
+    <%= f.collection_select(:race_schedule_id, 
+          RaceSchedule.all, 
+          :id,
+          :details, include_blank:true) %>
+    </div>
+
     <div class="btn-group">
       <%= f.submit "Submit", class: "btn btn-primary" %>
     </div>
