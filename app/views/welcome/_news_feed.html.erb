@@ -3,8 +3,8 @@
     <div class= "col-md-offset-1 col-md-10">
       <% @news_feeds.each do |news_feed| %>
       <div class = "row">
-        <div class = "col-md-7 img-responsive center news_feed_image" %>
-          <%= image_tag(news_feed.picture.url(:preview)) %>
+        <div class = "col-md-8 img-responsive center news_feed_image" %>
+          <%= image_tag(news_feed.picture.url(:slider)) %>
           <br>
             <% if news_feed.race_schedule_id %>
            <span>
@@ -17,7 +17,7 @@
           </span>
           
         </div>
-        <div class = "col-md-5 text-left">
+        <div class = "col-md-4 text-left">
           <p class = "news_comments" style = "white-space: pre-wrap">
           <span class= "text-primary"><br><%= news_feed.created_at.strftime("%F") %> </span>
           <br><%= news_feed.content %> <br>
