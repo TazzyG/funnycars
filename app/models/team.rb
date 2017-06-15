@@ -11,7 +11,9 @@ class Team < ApplicationRecord
   validates :team_name, presence: true, length: { maximum: 140 }
   
   validate  :picture_size
-  
+  # def self.team_news_feeds 
+  #   self.team_news_feeds = NewsFeed.where(team_id == self.id)
+  # end
   private
 
     # Validates the size of an uploaded picture.

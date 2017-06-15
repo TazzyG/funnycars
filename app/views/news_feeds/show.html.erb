@@ -14,6 +14,17 @@
         <div>
          
             <p><%= image_tag @news_feed.picture.url %></p>
+            <br>
+            <% if @news_feed.race_schedule_id %>
+           <span>
+             <strong>Event: </strong> <%= @news_feed.race_schedule.details %>
+            
+            <% end %>
+            <% if @news_feed.team_id %> 
+             <strong> Team: </strong> <%= @news_feed.team.team_name %>
+            <% end %>
+          </span>
+          
             
           
           <p style="white-space: pre-wrap"><strong>Info: </strong><%= @news_feed.content %></p>
