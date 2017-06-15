@@ -4,14 +4,17 @@
       <% @news_feeds.each do |news_feed| %>
       <div class = "row">
         <div class = "col-md-7 img-responsive center news_feed_image" %>
-            <%= image_tag(news_feed.picture.url(:preview)) %>
-              <br> 
+          <%= image_tag(news_feed.picture.url(:preview)) %>
+          <div>
             <% if news_feed.race_schedule_id %>
+           
               Event: <%= news_feed.race_schedule.details %>
+            
             <% end %>
             <% if news_feed.team_id %> 
               Team: <%= news_feed.team.team_name %>
             <% end %>
+          </div>
         </div>
         <div class = "col-md-5 text-left">
           <p class = "news_comments" style = "white-space: pre-wrap">
