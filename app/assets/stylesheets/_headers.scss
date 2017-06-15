@@ -1,5 +1,15 @@
-// Intro Sections
+@import 'variables';
 
+// Intro Sections
+.social-links {
+  a {
+    color: $light;
+    padding: 3px;
+    &:hover {
+          color: $info;
+        }
+  }
+}
 h1 {
   font-family: 'Merriweather', serif;
 }

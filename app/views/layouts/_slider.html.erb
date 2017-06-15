@@ -50,16 +50,17 @@
     
     </div>
     <div class="col-md-3 col-md-offset-1-right sponsors">
-      
-      <%= link_to "https://www.facebook.com/RockyMountainNostalgiaFunnyCars?fref=ts" do %>
-       <i class="fa fa-facebook-square fa-2x" > </i>
-      <% end %>
-      <%= link_to "https://www.youtube.com/channel/UCbhbAoakAgslJWmZYiTvn0w" do %>
-       <i class="fa fa-youtube-square fa-2x" > </i>
-      <% end %>
-      <% @sponsors.each do |sponsor| %>
-      <div>
-        
+      <div class = "social-links"> 
+        <%= link_to "https://www.facebook.com/RockyMountainNostalgiaFunnyCars?fref=ts" do %>
+         <i class="fa fa-facebook-square fa-4x" > </i>
+        <% end %>
+        <%= link_to "https://www.youtube.com/channel/UCbhbAoakAgslJWmZYiTvn0w" do %>
+         <i class="fa fa-youtube-square fa-4x" > </i>
+        <% end %>
+      </div>
+        <% @sponsors.each do |sponsor| %>
+        <div>
+      </div> 
         <%= link_to sponsor.web_site, target: '_blank' do %>
           <span class= "logo img-responsive center-block">
            
