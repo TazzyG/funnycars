@@ -5,7 +5,7 @@
       <div class = "row">
         <div class = "col-md-7 img-responsive center news_feed_image" %>
           <%= image_tag(news_feed.picture.url(:preview)) %>
-          <div>
+          <br>
             <% if news_feed.race_schedule_id %>
            <span>
               Event: <%= news_feed.race_schedule.details %>
@@ -15,7 +15,7 @@
               Team: <%= news_feed.team.team_name %>
             <% end %>
           </span>
-          </div>
+          
         </div>
         <div class = "col-md-5 text-left">
           <p class = "news_comments" style = "white-space: pre-wrap">
