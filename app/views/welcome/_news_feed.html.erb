@@ -7,13 +7,14 @@
           <%= image_tag(news_feed.picture.url(:preview)) %>
           <div>
             <% if news_feed.race_schedule_id %>
-           
+           <span>
               Event: <%= news_feed.race_schedule.details %>
             
             <% end %>
             <% if news_feed.team_id %> 
               Team: <%= news_feed.team.team_name %>
             <% end %>
+          </span>
           </div>
         </div>
         <div class = "col-md-5 text-left">
