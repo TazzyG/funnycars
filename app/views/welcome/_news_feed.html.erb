@@ -4,7 +4,7 @@
       <% @news_feeds.each do |news_feed| %>
       <div class = "row">
         <div class = "col-md-8 img-responsive center news_feed_image" %>
-          <%= image_tag(news_feed.picture.url(:slider)) %>
+          <%= image_tag(news_feed.picture.url) %>
           <br>
             <% if news_feed.race_schedule_id %>
            <span>
