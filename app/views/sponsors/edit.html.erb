@@ -1,17 +1,18 @@
 <% provide(:title, "Edit #{@sponsor.company_name}") %>
-<div class= "containter text-left">
-  <div class= "row">
-    <div class= "col-md-offset-1 col-md-10">
-      <p>
-        <span> <%= image_tag @sponsor.picture.url(:thumb) %></span>
-      </p>
-      <p>
-        <%= @sponsor.company_name%>
-        
-        <%= @sponsor.full_name %>
-        <%= @sponsor.email %>
-        <%= @sponsor.phone %> 
-      </p>
-      <p><%= @sponsor.sponsored_with %></p>
+<div class="container text-left" id="newpath">
+  <div class = "row">
+    <div class="col-md-8 col-md-offset-2">
+       <div class="panel panel-default">
+          <div class= "panel-heading">
+            <h1>Edit <%= @team.company_name %></h1>
+        </div>
+        <div class = "panel-body">
+          <%= render 'form', sponsor: @team %>
+        </div>
+			  <div class= "panel-footer">
+         <em class = "text-info">All we need is love</em>
+       </div>
+		  </div>  
+    </div>
   </div>
 </div>
