@@ -5,11 +5,11 @@
       
         
           <h1><%= @announcement.title %></h1>
-          <em><%= link_to @announcement.race_schedule.details, race_schedule_path(@announcement.race_schedule) %> </em>
-          <h2><%= @announcement.sub_title %> </h2>
+          <h4><%= @announcement.sub_title %> </h4>
            <% if @announcement.pdf? %>
-             <iframe src=<%= @announcement.pdf.url %> width="600" height="780" style="border: none;"> </iframe>
-             <%= @announcement.race_schedule.details %>
+           <em><%= link_to @announcement.race_schedule.details, race_schedule_path(@announcement.race_schedule) %></em>
+           <br>  <iframe src=<%= @announcement.pdf.url %> width="600" height="780" style="border: none;"> </iframe>
+             
           <% end %>
           
           <% if @announcement.sticky == true %> 
