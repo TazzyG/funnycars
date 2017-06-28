@@ -75,7 +75,7 @@
 </div>
 <% if current_user %>
 <div class= "row container">
-   <div class="col-md-offset-1 col-md-6 col-offset-right-6">
+   <div class="col-md-offset-1 col-md-10">
     <h2> Add More Team Details</h2>
     <%= render "team_infos/form" %>
     <h2> Add Team Photographs </h2>
@@ -84,7 +84,7 @@
 </div>
 <% end %>
 <div class= "row container">
-  <div class= "col-md-10">
+  <div class= "col-md-offset-1 col-md-10">
     <%= render @team.team_infos %> 
   </div>
 </div>
