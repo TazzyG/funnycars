@@ -49,6 +49,6 @@ class AnnouncementsController < ApplicationController
    @announcement = Announcement.find(params[:id])   
   end
   def announcement_params
-    params.require(:announcement).permit(:title, :sub_title, :content, :sticky, :youtube, :user_id)
+    params.require(:announcement).permit(:title, :sub_title, :content, :sticky, :youtube, :user_id, :pdf, :pdf_cache, :race_schedule_id)
   end
 end

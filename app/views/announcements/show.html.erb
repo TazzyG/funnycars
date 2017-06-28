@@ -7,7 +7,9 @@
           <h1><%= @announcement.title %></h1>
           
           <h2><%= @announcement.sub_title %></h2>
-          
+           <% if @announcement.pdf? %>
+             <iframe src=<%= @announcement.pdf.url %> width="600" height="780" style="border: none;"> </iframe>
+          <% end %> 
           <% if @announcement.sticky == true %> 
             <h4> Feature Post</h4>
           <% end %>

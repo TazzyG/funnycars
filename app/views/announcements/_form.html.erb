@@ -23,6 +23,18 @@
       <%= f.text_area :content, class: "form-control", placeholder: "Details" %>
     </div>
     <div class="form-group">
+      <%= f.label :pdf %>
+      <%= f.file_field :pdf %>
+      <%= f.hidden_field :pdf_cache %>
+    </div>
+    <div class= "form_tag">
+    <%= f.label :Event %> <br>
+    <%= f.collection_select(:race_schedule_id, 
+          RaceSchedule.all, 
+          :id,
+          :details, include_blank:true) %>
+    </div>
+    <div class="form-group">
       <%= f.text_field :youtube, class: "form-control", placeholder: "t31zAbpFPW8" %>
     </div>
     <div class="checkbox">

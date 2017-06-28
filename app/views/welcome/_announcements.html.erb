@@ -4,19 +4,24 @@
         <div class= "col-md-10">
        
           <% if announcement.sticky? %>
-            <h1> <%= announcement.title %></h1>
-            <h2 class= "text-primary"><%= announcement.sub_title %>
-            <% if current_user %>
-              <%= link_to "Edit", announcement_path(announcement) %> |
-              <%= link_to "Delete", announcement, method: :delete,
-                data: {confirm: "Are you sure?"} %>
-            <% end %>
-            </h2>
+            <h1> <%= link_to announcement.title, announcement_path(announcement) %></h1>
+            <h2 class= "text-primary"><%= announcement.sub_title %></h2>
+            <p>
+              <% if current_user %>
+                <%= link_to "Edit", announcement_path(announcement) %> |
+                <%= link_to "Delete", announcement, method: :delete,
+                  data: {confirm: "Are you sure?"} %>
+              <% end %>
+            </p>
+            
             <% if announcement.youtube? %> 
               <div class="youtube">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
               </div>
-            <% end %>
+            <% elsif announcement.pdf? %>
+             <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
+            <% end %> 
+            
             <p> 
              <%= simple_format(announcement.content) %>
             </p>
@@ -30,7 +35,7 @@
       <div class = "row text-left announcement_comments">
         <div class= "col-md-10">
           <% if announcement.sticky == false %>
-            <h1> <%= announcement.title %></h1>
+            <h1> <%= link_to announcement.title, announcement_path(announcement) %></h1>
             <h2 class= "text-primary"><%= announcement.sub_title %>
             <% if current_user %>
               <%= link_to "Edit", announcement_path(announcement) %> |
@@ -38,9 +43,14 @@
                 data: {confirm: "Are you sure?"} %>
             <% end %>
             </h2>
-             <div class="youtube">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
-            </div>
+             <% if announcement.youtube? %> 
+              <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
+              </div>
+            <% elsif announcement.pdf? %>
+             <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
+            <% end %> 
+            
             <p> 
               <%= simple_format(announcement.content) %>
             </p>
