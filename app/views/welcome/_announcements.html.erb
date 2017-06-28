@@ -6,6 +6,7 @@
           <% if announcement.sticky? %>
             <h1> <%= link_to announcement.title, announcement_path(announcement) %></h1>
             <h2 class= "text-primary"><%= announcement.sub_title %></h2>
+            
             <p>
               <% if current_user %>
                 <%= link_to "Edit", announcement_path(announcement) %> |
@@ -19,6 +20,8 @@
                 <iframe width="280" height="158" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
               </div>
             <% elsif announcement.pdf? %>
+             <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
+             <br>
              <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
             <% end %> 
             
@@ -48,6 +51,8 @@
                 <iframe width="2800" height="158" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
               </div>
             <% elsif announcement.pdf? %>
+             <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
+             <br>
              <iframe src=<%= announcement.pdf.url %> width="425" height="550" style="border: none;"> </iframe>
             <% end %> 
             
