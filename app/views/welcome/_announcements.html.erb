@@ -16,7 +16,7 @@
             
             <% if announcement.youtube? %> 
               <div class="youtube">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
+                <iframe width="280" height="158" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
               </div>
             <% elsif announcement.pdf? %>
              <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
@@ -45,7 +45,7 @@
             </h2>
              <% if announcement.youtube? %> 
               <div class="youtube">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
+                <iframe width="2800" height="158" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
               </div>
             <% elsif announcement.pdf? %>
              <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
