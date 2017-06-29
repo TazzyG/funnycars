@@ -1,0 +1,11 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class= "item active img-responsive center-block">
+      <% @race_schedule.news_feeds.each do |news_feed| %>
+      <br>
+        <%= image_tag(news_feed.picture.url) %>
+      <% end %>
+    </end>
+  </div>
+  </div>
+</div>

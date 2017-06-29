@@ -43,6 +43,9 @@
           <% end %>
           </td>
           <td><%= link_to race_schedule.location, race_schedule %>
+            <% if  race_schedule.news_feeds.count > 0 %> 
+              <i class = "fa fa-camera-retro text-info" > </i>
+            <% end %>
           </td>
           <td><%= race_schedule.details %>
           </td>

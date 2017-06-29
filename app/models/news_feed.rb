@@ -1,12 +1,13 @@
 class NewsFeed < ApplicationRecord
   
   belongs_to :user
+  belongs_to :race_schedule
   
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 60 }
   validates :picture, presence: true
-  validates :content, presence: true, length: { maximum: 4500 }
+  validates :content, length: { maximum: 4500 }
   
   def team 
     @team = Team.find(team_id)
