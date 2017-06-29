@@ -1,11 +1,12 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class= "item active img-responsive center-block">
-      <% @race_schedule.news_feeds.each do |news_feed| %>
-      <br>
-        <%= image_tag(news_feed.picture.url) %>
-      <% end %>
-    </end>
-  </div>
+      <%= image_tag(@race_schedule.news_feeds.sample.picture.url) %>
+    </div>
+    <% @race_schedule.news_feeds.each do |news_feed| %>
+      <div class= "item img-responsive center-block">
+      <%= link_to image_tag(news_feed.picture.url), news_feed_path(news_feed) %>
+      </div>
+    <% end %>
   </div>
 </div>

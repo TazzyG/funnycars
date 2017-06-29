@@ -44,20 +44,7 @@
       <% if @race_schedule.news_feeds.count < 1 %> 
         <p> What happens at the track stays on the track <br> Sorry, no Pictures for this event </p>
       <% else %>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class= "item active img-responsive center-block ">
-              <%= image_tag(@race_schedule.news_feeds.sample.picture.url) %>
-            </div>
-            <div class= "item img-responsive center-block">
-              <% @race_schedule.news_feeds.each do |news_feed| %>
-              <br>
-                <%= image_tag(news_feed.picture.url) %>
-              <% end %>
-            </end>
-          </div>
-          </div>
-        </div>
+        <%= render "event_pic_carousel"%>
       <% end %> 
     </div>
        
