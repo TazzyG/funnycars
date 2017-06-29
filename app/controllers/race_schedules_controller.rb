@@ -4,8 +4,8 @@ class RaceSchedulesController < ApplicationController
   before_action :set_race_schedule, only: [:show, :edit, :update, :destroy]
   
   def index
-    @race_schedules = RaceSchedule.all
-    @articles = Article.all
+    @race_schedules = RaceSchedule.all.order("race_start_date ASC")
+    @articles = Article.all.order("created_at DESC")
   end
   
   def show
