@@ -2,6 +2,15 @@
 <div class= "containter text-left">
   <div class= "row">
     <div class= "col-md-offset-1 col-md-10">
+    <% if @race_schedule.race_start_date < Date.today  %>
+    <p class= "text-muted">
+        <%= @race_schedule.race_start_date.strftime("%B%d")%> -
+        <%= @race_schedule.race_end_date.strftime("%B%d")%> |
+        <%= @race_schedule.location %> |
+        <%= @race_schedule.details %> |
+        <%= @race_schedule.race_type %> 
+    </p>
+    <% else %> 
     <p>
         <%= @race_schedule.race_start_date.strftime("%B%d")%> -
         <%= @race_schedule.race_end_date.strftime("%B%d")%> |
@@ -9,6 +18,8 @@
         <%= @race_schedule.details %> |
         <%= @race_schedule.race_type %> 
     </p>
+    <% end %> 
+      
     <h4>
       Announcements and Info :
         <% @race_schedule.announcements.each do |announcement| %>

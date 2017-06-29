@@ -30,11 +30,12 @@
           </tr>
         </thead>
         <tbody>
-        <tr>
-          <td><%= race_schedule.race_start_date.strftime("%b %d") %>
-          <% unless race_schedule.race_start_date == race_schedule.race_end_date %>
-            - 
-            <% if race_schedule.race_start_date.month == race_schedule.race_end_date.month %>
+          <% if race_schedule.race_start_date < Date.today  %>
+            <tr class= "text-muted">
+            <td><%= race_schedule.race_start_date.strftime("%b %d") %>
+            <% unless race_schedule.race_start_date == race_schedule.race_end_date %>
+              - 
+              <% if race_schedule.race_start_date.month == race_schedule.race_end_date.month %>
               <%= race_schedule.race_end_date.strftime("%d") %>
             <% else %>
               <%= race_schedule.race_end_date.strftime("%b %d") %>
@@ -48,6 +49,26 @@
           <td><%= race_schedule.race_type %>
           </td>
         </tr>
+          <% else %>
+            <tr>
+            <td><%= race_schedule.race_start_date.strftime("%b %d") %>
+            <% unless race_schedule.race_start_date == race_schedule.race_end_date %>
+              - 
+              <% if race_schedule.race_start_date.month == race_schedule.race_end_date.month %>
+              <%= race_schedule.race_end_date.strftime("%d") %>
+            <% else %>
+              <%= race_schedule.race_end_date.strftime("%b %d") %>
+            <% end %>
+          <% end %>
+          </td>
+          <td><%= link_to race_schedule.location, race_schedule %>
+          </td>
+          <td><%= race_schedule.details %>
+          </td>
+          <td><%= race_schedule.race_type %>
+          </td>
+        </tr>
+          <% end %>
        </tbody>
       </table>
       <% end %>
