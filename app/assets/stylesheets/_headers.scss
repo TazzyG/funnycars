@@ -50,6 +50,7 @@ h1 {
     height: auto;
     display: block;
     margin: 5%;
+    border-radius: 5px;
     
     
   }
@@ -57,6 +58,9 @@ h1 {
 .announcements {
   position: absolute;
   margin: 0 auto;
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 5px;
 }
   
 .news_feed_image {
@@ -64,6 +68,8 @@ h1 {
   height: auto;
   display: block;
   padding: 5%;
+  border: solid $info 1px;
+  border-radius: 5px;
     
 }
 

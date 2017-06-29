@@ -1,8 +1,10 @@
 body {
      height: 100%;
-     color: #FFF;
-     background-color: #000;
+     color: $light;
      margin-top: 5%;
+     background: #000 image-url('castrol-bg.png') no-repeat center center fixed;
+     background-size: cover;
+     
      
 }
 
