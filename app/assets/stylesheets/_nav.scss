@@ -34,6 +34,16 @@
   
 }
 
+.simple_navbar.top-nav-collapse {
+   border-bottom: 1px solid darken($dark, 5%);
+  background-color: $dark;
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+
+
 @media (min-width: 768px) {
   
   .simple_navbar .navbar-nav {
@@ -62,4 +72,11 @@
   
 }
  
+}
+
+.simple_navbar.top-nav-collapse {
+  
+	border-bottom: 1px solid;
+	border-color: $dark;
+	background-color: $dark;
 }
