@@ -1,9 +1,11 @@
 <div class = "container news_feed">
   <div class= "row">
     <div class= "col-md-offset-1 col-md-10">
-      <% @news_feeds.each do |news_feed| %>
-        <% if news_feed.race_schedule_id == nil %>
-          <div class = "row">
+      <div>
+        <%= will_paginate @main_news_feeds %>
+      </div>
+      <% @main_news_feeds.each do |news_feed| %>
+        <div class = "row">
           <div class = "col-md-8 img-responsive center news_feed_image" %>
             <%= image_tag(news_feed.picture.url) %>
             <br>
@@ -31,8 +33,10 @@
             <% end %>
           </div>
         </div>
-        <% end %>
       <% end %>
+      <div>
+        <%= will_paginate @main_news_feeds %>
+      </div>
     </div>
   </div>
 </div>

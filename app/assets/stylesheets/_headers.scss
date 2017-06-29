@@ -142,4 +142,14 @@ h1 {
   height: 100%;
 }
 
+.pagination {
+  .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: $danger;
+    border-color: $danger;
+    cursor: default;
+  }
+}
+
 

@@ -47,7 +47,8 @@ gem 'fog-aws', group: :production
 gem 'carrierwave', '~> 1.0'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'chronic'
-
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 
 
