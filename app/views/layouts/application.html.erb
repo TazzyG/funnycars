@@ -3,14 +3,12 @@
   <%= render 'layouts/head' %>
   <body id="page-top" data-target=".navbar-fixed-top">
     <div id="wrapper">
-
       <%= render 'layouts/navigation' %>
       <%= render 'layouts/logo' %>
-     
-        <%= render 'layouts/flash_messages' %>
-        <%= yield %>
-        
-     
+        <div class="container">
+          <%= render 'layouts/flash_messages' %>
+          <%= yield %>
+        </div>  
       <%= render 'layouts/footer' %>
     </div>
     <%= render 'layouts/google_analytics' %>
