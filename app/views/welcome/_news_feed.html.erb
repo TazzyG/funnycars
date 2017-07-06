@@ -4,31 +4,31 @@
       <div>
         
       </div>
-      <% @main_news_feeds.each do |news_feed| %>
+      <% @main_news_feeds.each do |main_news_feed| %>
         <div class = "row">
           <div class = "col-md-8 img-responsive center news_feed_image" %>
-            <%= image_tag(news_feed.picture.url) %>
+            <%= image_tag(main_news_feed.picture.url) %>
             <br>
-              <% if news_feed.race_schedule_id %>
+              <% if main_news_feed.race_schedule_id %>
              <span>
-                Event: <%= news_feed.race_schedule.details %>
+                Event: <%= main_news_feed.race_schedule.details %>
               
               <% end %>
-              <% if news_feed.team_id %> 
-                Team: <%= news_feed.team.team_name %>
+              <% if main_news_feed.team_id %> 
+                Team: <%= main_news_feed.team.team_name %>
               <% end %>
             </span>
             
           </div>
           <div class = "col-md-4 text-left">
             <p class = "news_comments" style = "white-space: pre-wrap">
-            <span class= "text-primary"><br><%= news_feed.created_at.strftime("%F") %> </span>
-            <br><%= news_feed.content %> <br>
+            <span class= "text-primary"><br><%= main_news_feed.created_at.strftime("%F") %> </span>
+            <br><%= main_news_feed.content %> <br>
             </p>  
              <% if current_user %>
             <p>
-              <%= link_to 'Edit This Post', edit_news_feed_path(news_feed) %> 
-              <%= link_to 'Delete This Post', news_feed, method: :delete, data: { confirm: "Are you sure?" } %>  
+              <%= link_to 'Edit This Post', edit_news_feed_path(main_news_feed) %> 
+              <%= link_to 'Delete This Post', main_news_feed, method: :delete, data: { confirm: "Are you sure?" } %>  
             </p>
             <% end %>
           </div>
