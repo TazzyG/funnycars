@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
     @sponsors = Sponsor.all
     @news_feeds = NewsFeed.where(:created_at =>Chronic.parse('June 2 2017 at 1pm').. Time.now).order("created_at DESC ") 
     @announcements = Announcement.all.order("created_at DESC")
-    @main_news_feeds = @news_feeds.where(:race_schedule_id == nil)
+    @main_news_feeds = @news_feeds.where(:race_schedule_id => nil)
   end
   
   def nl2br(s)

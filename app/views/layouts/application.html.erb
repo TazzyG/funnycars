@@ -5,11 +5,12 @@
     <div id="wrapper">
       <%= render 'layouts/navigation' %>
       <%= render 'layouts/logo' %>
-        <div class="container">
+        
           <%= render 'layouts/flash_messages' %>
           <%= yield %>
-        </div>  
-      <%= render 'layouts/footer' %>
+        
+        <%= render 'layouts/footer' %>
+        
     </div>
     <%= render 'layouts/google_analytics' %>
   </body>
