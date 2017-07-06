@@ -1,5 +1,5 @@
 <% provide(:title, @race_schedule.details) %>
-<div class= "containter text-left">
+<div class= "padding-bottom">
   <div class= "row">
     <div class= "col-md-offset-1 col-md-3">
     <% if @race_schedule.race_start_date < Date.today  %>
@@ -50,16 +50,15 @@
     </div>
        
   </div>
-  <div class= "row container">
+  <div class= "row container text-center">
   <% if current_user %>
-    <div class = "container text-center">
-      <br>
+   <br>
      <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
      <%= link_to "Edit Event", edit_race_schedule_path(@race_schedule), class: "btn btn-info" %> 
      <%= link_to "Delete #{@race_schedule.details}", @race_schedule, method: :delete, 
        data: {confirm: "Are you sure?" }, class: 'btn btn-warning' %>
-    </div>
-    <br>
+   
+    
   <% end %>
   </div>
 </div>
