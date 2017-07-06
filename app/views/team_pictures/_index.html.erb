@@ -1,8 +1,8 @@
 <div class= "col-md-offset-1 col-md-10 teams">
-<% @team.team_pictures.each_slice(3) do |team_pictures| %>
+<% @team.team_pictures.each_slice(2) do |team_pictures| %>
   <div class= "row">
     <% team_pictures.each do |team_picture| %>
-      <div class= "col-xs-4 img-responsive center logo">
+      <div class= "col-xs-6 img-responsive center logo">
         <div class= "img-responsive center">
           <%= image_tag team_picture.picture_url unless team_picture.picture.blank? %>
           <br>
