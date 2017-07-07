@@ -22,7 +22,7 @@
           <% end %>
           <p>
             <% if current_user %> 
-              <%= link_to 'An an Other Announcement', new_announcement_path, class: "btn btn-primary" %>
+              <%= link_to 'New Announcement', new_announcement_path, class: "btn btn-primary" %>
             <% end %> 
           </p>
           <p><%= simple_format(@announcement.content) %></p>
