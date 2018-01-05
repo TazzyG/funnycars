@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get '/photos2014', to: 'archives#photos_2014'
   get '/photos2015', to: 'archives#photos_2015'
   get '/photos2016', to: 'archives#photos_2016'
+  get '/photos2017', to: 'archives#photos_2017'
   
   resources :sponsors
   resources :announcements

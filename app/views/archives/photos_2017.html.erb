@@ -1,0 +1,7 @@
+<% provide(:title, "photos_2017") %>
+<div class = "container">
+<% @photos_2017.each do |news_feed| %>
+	<%= link_to image_tag(news_feed.picture.url(:thumb)), news_feed %>
+<% end %> 
+
+</div>

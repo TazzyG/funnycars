@@ -1,4 +1,7 @@
 class ArchivesController < ApplicationController
+
+  require 'chronic'
+  require 'date'
  
   
   def photos_2010
@@ -22,4 +25,8 @@ class ArchivesController < ApplicationController
   def photos_2016
     @photos_2016 = NewsFeed.all.order("created_at DESC ")
   end
+  def photos_2017
+    @photos_2017 = NewsFeed.where(created_at: '2017-01-01'.. '2017-12-31').order("created_at DESC ") 
+  end
 end
+
