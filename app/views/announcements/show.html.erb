@@ -6,8 +6,10 @@
         
           <h1><%= @announcement.title %></h1>
           <h4><%= @announcement.sub_title %> </h4>
-           <% if @announcement.pdf? %>
-           <em><%= link_to @announcement.race_schedule.details, race_schedule_path(@announcement.race_schedule) %></em>
+           <% if @announcement.pdf?  %>
+           <% unless @announcement.race_schedule == nil %> 
+            <em><%= link_to @announcement.race_schedule.details, race_schedule_path(@announcement.race_schedule) %></em>
+          <% end %> 
            <br>  <iframe src=<%= @announcement.pdf.url %> width="600" height="780" style="border: none;"> </iframe>
              
           <% end %>

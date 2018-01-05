@@ -36,7 +36,7 @@
       </div>
     <% end %> 
     
-    <% @announcements.each do |announcement| %> 
+    <% @announcements.limit(3) do |announcement| %> 
       <div class = "row text-left announcement_comments">
         <div class= "col-md-10">
           <% if announcement.sticky == false %>
@@ -68,4 +68,7 @@
         </div>
       </div>
     <% end %>
+    <% if @announcements.count > 3 %>
+      <%= link_to "see all announcements", announcements_path %> 
+    <% end %> 
  

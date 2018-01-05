@@ -5,6 +5,6 @@ class Announcement < ApplicationRecord
   validates :title, presence: true, length: { maximum: 60 }
   validates :content, presence: true
   
-  belongs_to :race_schedule
+  belongs_to :race_schedule, optional: true
   
 end

@@ -27,7 +27,6 @@ Rails.application.routes.draw do
   get '/photos2016', to: 'archives#photos_2016'
   
   resources :sponsors
-  resources :standings
   resources :announcements
   
   resources :topics

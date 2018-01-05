@@ -1,7 +1,7 @@
 class NewsFeed < ApplicationRecord
   
   belongs_to :user
-  belongs_to :race_schedule
+  belongs_to :race_schedule, optional: true
   
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
@@ -14,7 +14,7 @@ class NewsFeed < ApplicationRecord
   end
   
   def race_schedule
-    @race_schedule = RaceSchedule.find(race_schedule_id)
+    RaceSchedule.find(self.race_schedule_id) 
   end
   
   validate  :picture_size
