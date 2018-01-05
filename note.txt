@@ -45,5 +45,8 @@ Churned on drop down colors, ended up simply adding a ';' at the end of my css
 
 fixed broken links on sponsor logos
 
+Rails broke, this command fixed it.
+rake app:update:bin
+
 
 
