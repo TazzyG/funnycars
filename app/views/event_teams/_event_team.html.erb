@@ -1,14 +1,10 @@
 <p>
-  <%= event_team.race_schedule.details %> 
+  
   <%= event_team.team.team_name %>  
-  <% if event_team.race_result == nil %>
-   <span class= "text-muted">-- no result yet </span>
-  <% else %>
-    <span class= "text-primary"><strong> -- Result: </strong><%= event_team.race_result %> </span>
-  <% end %>
+  
   <% if current_user %>
   
-    <%= link_to "Remove Result", [event_team.race_schedule, event_team],
+    <%= link_to "Remove Team", [event_team.race_schedule, event_team],
           method: :delete, 
           data: {confirm: 'Are you sure?' } %>
       
