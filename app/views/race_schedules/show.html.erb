@@ -20,14 +20,14 @@
     </p>
     <% end %> 
       
-    <h4>
+    <p>
       Announcements and Info :
         <% @race_schedule.announcements.each do |announcement| %>
         <br>
         <%= link_to "See info posted on #{announcement.created_at.strftime("%B%d")}", announcement_path(announcement) %> 
         <% end %>
-    </h4>
-    <h2 class= "text-primary">Result For <%= @race_schedule.details %></h2>
+    </p>
+    <h2 class= "text-primary"> <%= @race_schedule.details %></h2>
     <div class = "row">
       <div class= "col-md-12">
         
