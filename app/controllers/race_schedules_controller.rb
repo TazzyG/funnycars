@@ -1,9 +1,14 @@
 class RaceSchedulesController < ApplicationController
+
   require 'date'
+  require 'chronic'
+  
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_race_schedule, only: [:show, :edit, :update, :destroy]
   
   def index
+    @current_race_schedules = RaceSchedule.where(:created_at =>Chronic.parse('Jan 1 2018 at 1am').. Time.now).order("created_at DESC ") 
+    @last_year_race_schedules = RaceSchedule.where(created_at: '2017-06-06'.. '2017-12-31').order("created_at DESC ") 
     @race_schedules = RaceSchedule.all.order("race_start_date ASC")
     @articles = Article.all.order("created_at DESC")
   end
