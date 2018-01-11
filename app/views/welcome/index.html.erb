@@ -1,10 +1,18 @@
 <%= provide(:keywords, "rockymountainflappers.com, rockymountainflappers, flappers, rockymountain, funnycars, rockymountainnostalgiafunnycars.com, rockymountainnotaslgiafunnycars") %>
-<div class= "text-center" id="container">
+<div class= "row text-center">
 
     <%= render 'layouts/slider' %>
-   <%= render "welcome/news_feed" %>
-   
-    
+         
 </div>
+<div class= "row text-center"> 
+	<div class= "col-md-offset-1 col-md-10" >
+		<%= render "announcements" %>
+
+	</div>
+	<hr class = "primary">
+</div>
+		<%= render  "news_feed" %> 
+	
+
 
 

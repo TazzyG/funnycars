@@ -1,85 +1,25 @@
-<div id = "container" class= "intro">
-  <div class = "row"> 
-    <div class= "col-md-12">
-      <div class="row intro">
-        <div class="col-md-7 col-md-offset-1">
-          <div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="item active img-responsive center-block">
-                <div class= "slider_content">
-                  <em>Welcome to the <%= Time.current.year %> season! Things are heating up. We hope to see you at the events!</em>
-                </div>
-                <% if current_user %> 
-                     Can't Edit this one
-                  <% end %>
-                <%= image_tag @articles.sample.picture.url(:slider) %>
-                <br>
-                
-              </div>
-              <div>
-    
-                
-                
-              
-              </div>
-              <% @articles.each do |article| %>
-                <div class="item img-responsive center-block">
-                  <div class= "slider_content">
-                    <em><%= article.content %> </em>
-                  </div>
-                  <% if current_user %> 
-                    <%= link_to "EDIT", edit_article_path(article) %>
-                  <% end %>
-                  <%= image_tag article.picture.url(:slider) %> 
-                  <br>
-                  
-                </div>
-              <% end %>
-            </div>
-          </div>
+<div class= "intro">
+  
+    <% if current_user %>
+      <%= link_to "Post to Newsfeed", new_news_feed_path, class: "btn btn-primary" %>
+    <% end %> 
+    <div class= "col-md-10 col-md-offset-1 container">
+
+        <div class="col-md-8">
+          <%= render "carousel" %> 
           <div>
-          <% if current_user %>
-            <%= link_to "New Slider Picture", new_article_path, class: "btn btn-primary" %>
-            <%= link_to "New Team", new_team_path, class: "btn btn-primary" %>
-            <%= link_to "New Event", new_race_schedule_path, class: "btn btn-primary" %>
-            <%= link_to "Post to Newsfeed", new_news_feed_path, class: "btn btn-primary" %>
-            <%= link_to "Post an Announcment", new_announcement_path, class: 'btn btn-primary' %>
-          <% end %>
+          
           </div>
-        <%= render "welcome/announcements" %>
+        </div>
         
-        </div>
-        <div class="col-md-3 col-md-offset-1-right sponsors">
-          <div class = "social-links"> 
-            <%= link_to "https://www.facebook.com/RockyMountainNostalgiaFunnyCars?fref=ts" do %>
-             <i class="fa fa-facebook-square fa-4x" > </i>
-            <% end %>
-            <%= link_to "https://www.youtube.com/channel/UCbhbAoakAgslJWmZYiTvn0w" do %>
-             <i class="fa fa-youtube-square fa-4x" > </i>
-            <% end %>
-          </div>
-            <% @sponsors.each do |sponsor| %>
-            <div>
-          </div> 
-          <div>
-            <%= link_to sponsor.web_site, target: '_blank' do %>
-              <span class= "logo img-responsive center-block">
-               
-                <%= image_tag sponsor.picture.url %>
-                 <% end %>
-                <% if current_user %>
-                <%= link_to "View or Edit", sponsor %>
-              </span>
-            <% end %>
-          <% end %> 
-          </div>
-          <% if current_user %>
-            <div class= "text-center">
-            <%= link_to "Add New Sponsor", new_sponsor_path, class: "btn btn-primary" %>
-            </div>
-          <% end %> 
-        </div>
-      </div>
+        
+        <div class="col-md-4">
+          <%= render "social_links" %>
+          
+          <%= render "sponsors" %>
+          
+       
+        </div> 
     </div>
-  </div>
+  
 </div>

@@ -1,0 +1,20 @@
+
+<div id="myCarousel" class="carousel slide show_cars" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="item active img-responsive center-block">
+      <div class= "slider_content">
+        <em>Welcome to the <%= Time.current.year %> season! We hope to see you at the events!</em>
+      </div>
+        <% if current_user %> 
+           Can't Edit this one
+        <% end %>
+      <%= image_tag @articles.sample.picture.url(:slider) %>
+      <br>               
+    </div>
+    <div>
+  </div>
+    <%= render "articles" %> 
+  </div>
+
+</div>
+<%= link_to "New Slider Picture", new_article_path, class: "btn btn-primary" %>

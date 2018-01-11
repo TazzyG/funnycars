@@ -1,0 +1,13 @@
+ <% @articles.each do |article| %>
+  <div class="item img-responsive center-block">
+    <div class= "slider_content">
+      <em><%= article.content %> </em>
+    </div>
+    <% if current_user %> 
+      <%= link_to "EDIT", edit_article_path(article) %>
+    <% end %>
+    <%= image_tag article.picture.url(:slider) %> 
+    <br>
+    
+  </div>
+<% end %>
