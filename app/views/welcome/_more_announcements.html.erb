@@ -1,6 +1,6 @@
 <div class= "row container">
 <% @announcements.each do |announcement| %>    
-  <% if announcement.sticky? %>   
+  <% if announcement.sticky == false %>   
     <div class = "col-md-offset-1 col-md-10">
       <h1> <%= link_to announcement.title, announcement_path(announcement) %></h1>
       <div class= "col-md-8" >
@@ -14,25 +14,23 @@
            <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
          </div>
         <% end %>
-
-        <% if announcement.race_schedule_id? %>
-          <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
-        <% end %> 
          <br>
          <% if current_user %>
             <%= link_to "Edit", announcement_path(announcement) %> |
             <%= link_to "Delete", announcement, method: :delete,
               data: {confirm: "Are you sure?"} %>
           <% end %>
-          <hr class= "primary">
+        <hr class= "primary">
       </div>
       <div class= "col-md-4">
         <h2 class= "text-primary"><%= announcement.sub_title %></h2>
         <p> 
          <%= simple_format(announcement.content) %>
         </p>
+        <% if announcement.race_schedule_id? %>
+          See Event Details: <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
+        <% end %> 
       </div>
-
     </div>
   <% end %>
 <% end %> 

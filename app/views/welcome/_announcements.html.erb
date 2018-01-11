@@ -1,98 +1,18 @@
 
-    <% @announcements.each do |announcement| %> 
-      <div class = "row text-left announcement_comments">
-        
-       
-          <% if announcement.sticky? %>
-          <h1> <%= link_to announcement.title, announcement_path(announcement) %></h1>
-            <div class= "col-md-7" >
-            
-            <% if announcement.youtube? %> 
-              <div class="youtube responsive-video">
-                <iframe width="700" height="394" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
-              </div>
-            <% elsif announcement.pdf %>  %>
-              <div class = "responsive-video">
-               <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
-             </div>
-            <% end %>
-
-            <% if announcement.race_schedule_id? %>
-              <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
-            <% end %> 
-             <br>
-             <% if current_user %>
-                <%= link_to "Edit", announcement_path(announcement) %> |
-                <%= link_to "Delete", announcement, method: :delete,
-                  data: {confirm: "Are you sure?"} %>
-              <% end %>
-           </div>
-           <div class= "col-md-5">
-            
-            <h2 class= "text-primary"><%= announcement.sub_title %></h2>
-            
-            <p>
-              
-            </p>
-            <p> 
-             <%= simple_format(announcement.content) %>
-            </p>
-            
-          
-          
-            
-          <% end %>
-
-        
-      </div>
-      <hr class = "primary">
-    <% end %> 
+  
     
-    <% @announcements.limit(3).each do |announcement| %> 
-      <div class = "row text-left announcement_comments">
-        <h1> <%= link_to announcement.title, announcement_path(announcement) %></h1>
-          <% if announcement.sticky == false %>
-            <div class= "col-md-7" >
-            
-            <% if announcement.youtube? %> 
-              <div class="youtube responsive-video">
-                <iframe width="700" height="394" src="https://www.youtube.com/embed/<%=announcement.youtube%>" frameborder="0" allowfullscreen></iframe>
-              </div>
-            <% elsif announcement.pdf %>  %>
-              <div class = "responsive-video">
-               <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
-             </div>
-            <% end %>
+      <%= render "announcement_details" %>
+      <%= render "more_announcements" %>
 
-            <% if announcement.race_schedule_id? %>
-              <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
-            <% end %> 
-             <br>
-             <% if current_user %>
-                <%= link_to "Edit", announcement_path(announcement) %> |
-                <%= link_to "Delete", announcement, method: :delete,
-                  data: {confirm: "Are you sure?"} %>
-              <% end %>
-           </div>
-           <div class= "col-md-5">
-            
-            <h2 class= "text-primary"><%= announcement.sub_title %></h2>
-            
-            <p>
-              
-            </p>
-            <p> 
-             <%= simple_format(announcement.content) %>
-            </p>
-            
-          
-          <% end %>
-        
-      </div>
-    <% end %>
-    <% if @announcements.count > 3%>
-      <%= link_to "see all announcements", announcements_path %> 
-    <% end %> 
+      <% if @announcements.count > 3%>
+        <%= link_to "see all announcements", announcements_path %> 
+      <% end %>
+      
+    
+  
+  
+
+
 
     
  
