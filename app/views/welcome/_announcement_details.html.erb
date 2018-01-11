@@ -14,10 +14,6 @@
            <iframe src=<%= announcement.pdf.url %> width="350" height="390" style="border: none;"> </iframe>
          </div>
         <% end %>
-
-        <% if announcement.race_schedule_id? %>
-          <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
-        <% end %> 
          <br>
          <% if current_user %>
             <%= link_to "Edit", announcement_path(announcement) %> |
@@ -31,6 +27,9 @@
         <p> 
          <%= simple_format(announcement.content) %>
         </p>
+        <% if announcement.race_schedule_id? %>
+          See Event Details: <em><%= link_to announcement.race_schedule.details, race_schedule_path(announcement.race_schedule) %> </em>
+        <% end %> 
       </div>
 
     </div>
